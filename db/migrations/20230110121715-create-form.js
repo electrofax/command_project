@@ -60,6 +60,12 @@ module.exports = {
       link: {
         type: Sequelize.STRING
       },
+      first_task: {
+        type: Sequelize.BOOLEAN
+      },
+      email_sign: {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
