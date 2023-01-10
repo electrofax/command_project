@@ -132,12 +132,7 @@ function Form({ user }) {
             </li>
             <li>
               <p>
-                <input
-                  type="checkbox"
-                  name="#"
-                  value="1680"
-                  onChange
-                />
+                <input type="checkbox" name="#" value="1680" onChange />
                 Создай подпись в почте по корпоративному шаблону
               </p>
             </li>

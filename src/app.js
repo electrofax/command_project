@@ -52,13 +52,13 @@ app.use((req, res, next) => {
   next();
 });
 
-const mainPageRouter = require('./routes/mainPage.routes');
 const adminRoute = require('./routes/admin.routes');
+const formRoute = require('./routes/form.routes');
 const updateForm = require('./routes/api/form.routes');
-
 // const loginRouter = require('./routes/login.routes');
 
-app.use('/', mainPageRouter);
+
+app.use('/form', formRoute);
 // app.use('/login', checkLogin, loginRouter)
 
 // route for Admin
