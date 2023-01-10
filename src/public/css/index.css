@@ -1,0 +1,30 @@
+.backgroundImg {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/Retro\ Stripes\ in\ Blue\ Orange\ Wall\ Mural\ by\ PELAXY.jpeg');
+background-size:100%;
+  width: 500px;
+  height: 500px;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+}
+
+#inputs {
+  display: flex;
+  flex-direction:column ;
+  width: 80%;
+  height: 100px;
+}
+
+input {
+  margin: 5px;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
