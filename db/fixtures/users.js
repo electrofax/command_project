@@ -5,8 +5,8 @@ const users = [
       password: '123',
       name: 'Admin Adminovich Adminov',
       isAdmin: 'true',
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      // createdAt: new Date(),
+      // updatedAt: new Date(),
     },
     {
       login: 'hr1',
@@ -14,8 +14,8 @@ const users = [
       password: '123',
       name: 'Achar Acharovich',
       isAdmin: 'false',
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      // createdAt: new Date(),
+      // updatedAt: new Date(),
     },
     {
       login: 'hr2',
@@ -23,8 +23,8 @@ const users = [
       password: '123',
       name: 'Second Achar Acharovich',
       isAdmin: 'false',
-      createdAt: new Date(),
-      updatedAt: new Date(),
+      // createdAt: new Date(),
+      // updatedAt: new Date(),
     },
   ];
   
