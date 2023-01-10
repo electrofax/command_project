@@ -52,12 +52,21 @@ app.use((req, res, next) => {
   next();
 });
 
+<<<<<<< HEAD
+const homeRouter = require('./routes/home.routes');
+const formRouter = require('./routes/form.routes');
+// const loginRouter = require('./routes/login.routes');
+
+app.use('/', homeRouter);
+app.use('/form', formRouter);
+=======
 
 const mainPageRouter = require('./routes/mainPage.routes');
 const adminRoute = require('./routes/admin.routes');
 // const loginRouter = require('./routes/login.routes');
 
 app.use('/', mainPageRouter);
+>>>>>>> 6e1344c3c9bb09b22da6a2cacc2c5e4676438207
 // app.use('/login', checkLogin, loginRouter)
 
 // route for Admin

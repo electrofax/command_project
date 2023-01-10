@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const { renderHome } = require("../controllers/homeController");
+const { renderForm } = require("../controllers/homeController");
 
 
-router.get("/", renderHome);
+router.get("/", renderForm);
 
 module.exports = router;
   
