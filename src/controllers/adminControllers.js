@@ -1,7 +1,7 @@
 
 const renderTemplate = require('../lib/renderTamplate');
 const Admin = require('../views/Admin');
-// const { User } = require('../db/models')
+const { Form } = require('../../db/models')
 
 
 const renderAdmin = async (req, res) => {
@@ -9,6 +9,23 @@ const renderAdmin = async (req, res) => {
   renderTemplate(Admin, { user }, res);
 };
 
+const addEmployee = async (req, res) => {
+  const {
+    employee_name, mentor_name,
+  } = req.body;
+  console.log('reqBODY=>>', req.body);
+  // if (title && body) {
+  try {
+    await Form.create({
+      employee_name, mentor_name,
+    });
+    // res.json({ created: true, first: `${title}`, message: `${body}` });
+    // res.redirect('/post');
+  } catch (e) {
+    res.status(400).send('No data');
+  }
+};
 
 
-module.exports = { renderAdmin };
+
+module.exports = { renderAdmin, addEmployee };
