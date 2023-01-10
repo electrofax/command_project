@@ -1,6 +1,6 @@
 // Подключаем babel для работы с jsx
 require('dotenv').config();
-
+const path = require('path')
 const express = require('express');
 // Подключение библиотеки express
 const morgan = require('morgan');
@@ -22,6 +22,8 @@ const app = express();
 // Подключение middleware, который отдаёт клиенту файлы из папки
 // Подключение middleware, который парсит JSON от клиента
 // Подключение middleware, который парсит BODY от HTML-формы
+
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
 // const path = require('path')
 app.use(express.static(('public')))
@@ -50,11 +52,16 @@ app.use((req, res, next) => {
   next();
 });
 
+
 const mainPageRouter = require('./routes/mainPage.routes');
+const adminRoute = require('./routes/admin.routes');
 // const loginRouter = require('./routes/login.routes');
 
 app.use('/', mainPageRouter);
 // app.use('/login', checkLogin, loginRouter)
+
+// route for Admin
+app.use('/admin', adminRoute);
 
 // * пишем выход
 app.get('/logout', checkUser, (req, res) => { 

@@ -4,7 +4,7 @@ const Layout = require("./Layout");
 function Login() {
   return (
     <Layout>
-      {/* <script defer src="js/homePost.js" /> */}
+      <script defer src="js/homePost.js" />
       <link rel="stylesheet" href="/css/index.css" />
 
       <div className="form_cont">
