@@ -5,20 +5,23 @@ const { Form, sequelize } = require('../../../db/models');
 
 const updateForm = async (req, res) => {
 
-    let id = 1;
-    const { employee_name, pass_key } = req.body
+    let id = 2;
+
+    let key = Object.keys(req.body)[0]
+    let value = req.body[ Object.keys(req.body)[0] ] 
+
+    let toUpdate = {}
+    toUpdate [ key ] = value
 
     Form.update(
-        { pass_key: pass_key },
-        { where: { id: id }, raw: true, returning: true }
+      toUpdate,
+        { where: { id }, raw: true, returning: true }
       )
         .then((updatedPost) => {
-          const [, [updatedData]] = updatedPost;
+          const [, [data]] = updatedPost;
 
-          const key = Object.keys(req.body)[0]
-
-          updatedPost[0] === 1
-            ? res.json({ res: 'updated', key: key, value: updatedData.pass_key})
+          (updatedPost[0] === 1)
+            ? res.json({ res: 'updated', key: key, value: data[key]})
             : res.status(500).json({ res: `cant UPDATE form with ${id}` });
         })
         .catch((error) => res.status(500).json({ message: error.message }));
