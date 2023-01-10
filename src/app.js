@@ -26,7 +26,7 @@ const app = express();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
 // const path = require('path')
-// app.use( express.static(('public')))
+app.use(express.static(('public')))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -52,11 +52,12 @@ app.use((req, res, next) => {
   next();
 });
 
-const homeRouter = require('./routes/home.routes');
+
+const mainPageRouter = require('./routes/mainPage.routes');
 const adminRoute = require('./routes/admin.routes');
 // const loginRouter = require('./routes/login.routes');
 
-app.use('/', homeRouter);
+app.use('/', mainPageRouter);
 // app.use('/login', checkLogin, loginRouter)
 
 // route for Admin

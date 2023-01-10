@@ -1,3 +1,4 @@
+
 .backgroundImg {
   margin-top: 10vh;
   display: flex;
@@ -16,9 +17,9 @@ background-size:100%;
 
 #inputs {
   display: flex;
-  flex-direction:column ;
-  width: 80%;
-  height: 100px;
+  flex-direction:column;
+  /* align-items: center; */
+  /* height: 100px; */
 }
 
 input {
