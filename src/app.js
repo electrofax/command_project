@@ -51,9 +51,11 @@ app.use((req, res, next) => {
 });
 
 const homeRouter = require('./routes/home.routes');
+const formRouter = require('./routes/form.routes');
 // const loginRouter = require('./routes/login.routes');
 
 app.use('/', homeRouter);
+app.use('/form', formRouter);
 // app.use('/login', checkLogin, loginRouter)
 
 // * пишем выход
