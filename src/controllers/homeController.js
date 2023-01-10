@@ -1,6 +1,6 @@
 const renderTemplate = require('../lib/renderTamplate');
 const Form = require('../views/Form');
-const Home = require('../views/Home');
+// const Home = require('../views/Home');
 // const { User } = require('../db/models')
 
 
