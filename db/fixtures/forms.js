@@ -55,6 +55,25 @@ const forms = [
     three_names_check: 'true',
     createdAt: new Date(),
     updatedAt: new Date(),
+  },
+  {
+    employee_name: 'Сотруник_4 Сотрудникович_4',
+    mentor_name: 'Mentor Name4, Mentor Name4, Mentor Name4',
+    user_id: '2',
+    pass_key: 'false',
+    wifi: 'false',
+    laptop: 'false',
+    email_pass: 'false',
+    stationery: 'true',
+    meet_head: 'true',
+    chattochat: 'true',
+    three_names: 'true',
+    skans_of_docks: 'true',
+    com_secret: 'true',
+    link: 'laad1',
+    three_names_check: 'true',
+    createdAt: new Date(),
+    updatedAt: new Date(),
   }
 ];
 
