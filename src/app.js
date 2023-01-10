@@ -64,9 +64,10 @@ app.use('/form', formRoute);
 
 // route for Admin
 app.use('/admin', adminRoute);
+
+//api routes
 app.use('/api/form', updateForm);
 app.use('/api/form', getForm);
-
 
 // * пишем выход
 app.get('/logout', checkUser, (req, res) => { 

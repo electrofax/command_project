@@ -26,7 +26,7 @@ const updateForm = async (req, res) => {
 
 const getForm = async (req, res) => {
 
-  let id = 2;
+  const { id } = req.params;
 
   Form.findOne(
       { where: { id }, raw: true }

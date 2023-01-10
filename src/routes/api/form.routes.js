@@ -5,7 +5,7 @@ const { updateForm, getForm } = require('../../controllers/api/form');
 
 router
 .put('/', updateForm)
-.get('/', getForm)
+.get('/:id', getForm)
 
 module.exports = router;
   
