@@ -22,7 +22,7 @@ const addEmployee = async (req, res) => {
     // res.json({ created: true, first: `${title}`, message: `${body}` });
     // res.redirect('/post');
   } catch (e) {
-    res.status(400).send('No data');
+    res.status(401).send(`${e}`);
   }
 };
 
