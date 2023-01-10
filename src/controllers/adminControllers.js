@@ -17,7 +17,7 @@ const addEmployee = async (req, res) => {
   // if (title && body) {
   try {
     await Form.create({
-      employee_name, mentor_name,
+      employee_name, mentor_name, user_id: 1
     });
     // res.json({ created: true, first: `${title}`, message: `${body}` });
     // res.redirect('/post');
