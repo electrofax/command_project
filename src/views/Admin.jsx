@@ -5,7 +5,7 @@ module.exports = function Admin(props) {
   const { children } = props;
   return (
     <Layout>
-      <h1>AdminPage</h1>
+      <h1>AdminsPage</h1>
       <div id="container">
          <div className="backgroundImg">
           <form id="form" action="/admin" method="POST">
