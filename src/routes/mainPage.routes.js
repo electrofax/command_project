@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const { renderHome } = require('../controllers/homeController');
+const { rendermainPage } = require('../controllers/mainPageController');
 
 router
-  .get('/', renderHome)
+  .get('/', rendermainPage)
 
 module.exports = router;
   
