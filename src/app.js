@@ -52,9 +52,10 @@ app.use((req, res, next) => {
   next();
 });
 
-
 const mainPageRouter = require('./routes/mainPage.routes');
 const adminRoute = require('./routes/admin.routes');
+const updateForm = require('./routes/api/form.routes');
+
 // const loginRouter = require('./routes/login.routes');
 
 app.use('/', mainPageRouter);
@@ -62,6 +63,8 @@ app.use('/', mainPageRouter);
 
 // route for Admin
 app.use('/admin', adminRoute);
+app.use('/api/form', updateForm);
+
 
 // * пишем выход
 app.get('/logout', checkUser, (req, res) => { 
