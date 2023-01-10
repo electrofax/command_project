@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { QueryTypes } = require('sequelize');
-const { Form, sequelize } = require('../../db/models');
+const { Form, sequelize } = require('../../../db/models');
 
 const updateForm = async (req, res) => {
 

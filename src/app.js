@@ -54,6 +54,7 @@ app.use((req, res, next) => {
 
 const adminRoute = require('./routes/admin.routes');
 const formRoute = require('./routes/form.routes');
+const updateForm = require('./routes/api/form.routes');
 // const loginRouter = require('./routes/login.routes');
 
 
@@ -62,6 +63,8 @@ app.use('/form', formRoute);
 
 // route for Admin
 app.use('/admin', adminRoute);
+app.use('/api/form', updateForm);
+
 
 // * пишем выход
 app.get('/logout', checkUser, (req, res) => { 

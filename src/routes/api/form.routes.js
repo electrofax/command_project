@@ -1,11 +1,10 @@
 const express = require('express');
-
 const router = express.Router();
+const { updateForm } = require('../../controllers/api/form');
 
-const { renderHome } = require("../controllers/homeController");
 
-
-router.get("/", renderHome);
+router
+.put('/', updateForm)
 
 module.exports = router;
   
