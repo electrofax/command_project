@@ -1,7 +1,4 @@
-const express = require('express');
-const router = express.Router();
-const { QueryTypes } = require('sequelize');
-const { Form, sequelize } = require('../../../db/models');
+const { Form } = require('../../../db/models');
 
 const updateForm = async (req, res) => {
 
@@ -22,10 +19,25 @@ const updateForm = async (req, res) => {
 
           (updatedPost[0] === 1)
             ? res.json({ res: 'updated', key: key, value: data[key]})
-            : res.status(500).json({ res: `cant UPDATE form with ${id}` });
+            : res.status(400).json({ res: `cant UPDATE form with ${id}` });
         })
         .catch((error) => res.status(500).json({ message: error.message }));
 };
 
+const getForm = async (req, res) => {
 
-module.exports = { updateForm };
+  let id = 2;
+
+  Form.findOne(
+      { where: { id }, raw: true }
+    )
+      .then((updatedPost) => {
+
+        (updatedPost)
+          ? res.json(updatedPost)
+          : res.status(400).json({ res: `cant get form with ${id}` });
+      })
+      .catch((error) => res.status(500).json({ message: error.message }));
+};
+
+module.exports = { updateForm, getForm };
