@@ -59,6 +59,12 @@ module.exports = (sequelize, DataTypes) => {
     link: {
       type: DataTypes.STRING
     },
+    first_task: {
+      type: DataTypes.BOOLEAN
+    },
+    email_sign: {
+      type: DataTypes.BOOLEAN
+    },
   }, {
     sequelize,
     modelName: 'Form',
