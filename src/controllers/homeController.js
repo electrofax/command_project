@@ -2,7 +2,7 @@ const renderTemplate = require('../lib/renderTamplate');
 const Form = require('../views/Form');
 
 const renderForm = (req, res) => {
-  renderTemplate(Form, {}, res);
+  renderTemplate(Form, {fetchForm: true}, res);
 };
 
 
