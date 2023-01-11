@@ -1,8 +1,9 @@
 import { fetchData, fetchDataGet, el, checkInput } from './helper.js';
 
-let url = '/api/form'
+let url = window.location.origin + '/api/' + window.location.href.match(/form\/(.*)/g).at(-1)
+
 //отправить феч на получение данных
-const resp = await fetchDataGet(url + '/1')
+const resp = await fetchDataGet(url)
 
 //заполнить форму
 for (let key in resp) {
