@@ -9,7 +9,7 @@ module.exports = function Adopt({ user }) {
       <h1>AdminsPage {user}</h1>
       <div id="container">
           <div className="backgroundImg">
-          <form id="form" action="/admin" method="POST">
+          <form id="form" action="/adopt" method="POST">
           <div id="inputs">
               <input name="employee_name" placeholder="полное имя нового сотрудника" type="text" />
               <input name="mentor_name" placeholder="имя ментора" type="text" />
