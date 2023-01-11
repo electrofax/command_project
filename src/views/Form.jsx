@@ -1,15 +1,16 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-function Form({ user, fetchForm }) {
+function Forms({ user, fetchForm, one }) {
   return (
     <Layout user={user} fetchForm={fetchForm}>
+      {one ? (
       <div classNameName="formPage">
         <div>
           <p>
-            Привет, Имя Фамилия! И добро пожаловать в команду Высокогорья!
+            Привет, {one.employee_name}! И добро пожаловать в команду Высокогорья!
             Впереди нас ждет интересное путешествие в мир нашей компании, и
-            самым главным проводником будет- Имя Фамилия Мы подготовили для тебя
+            самым главным проводником будет- {one.mentor_name}. Мы подготовили для тебя
             чек-лист на первый день. Процесс выполнения будет сохраняться,
             поэтому ты можешь закрывать пункты в удобном для тебя порядке.
           </p>
@@ -190,8 +191,11 @@ function Form({ user, fetchForm }) {
           </div>
         </form>
       </div>
+      )  : ( 
+        <h1>Вас не существует</h1>
+      )}
     </Layout>
   );
 }
 
-module.exports = Form;
+module.exports = Forms;

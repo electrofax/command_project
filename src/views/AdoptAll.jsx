@@ -28,7 +28,7 @@ function AdoptAll(props) {
             {el.id},
             {'  '}
             { ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)}
-          {console.log(isBool(el))} %
+          {console.log(isBool(el))} 
             {/* {some.length} */}
           </div>
         ))}
