@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 /* .backgroundImg {
   margin-top: 10vh;
@@ -17,14 +18,75 @@ background-size:10%;
   border: 2px solid ghostwhite;
 }
 
+.cont_card{
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+
+}
+.content {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  background: url("../img/Fon.png") 0 0/100% auto no-repeat;
+  /* position: relative; */
+  width: 100%;
+  height: 1200px;
+
+  background: #d7d6d4;
+}
+.text_main{
+  /* position: absolute; */
+  /* width: 80%; */
+  height: 396px;
+  left: 120px;
+  top: 242px;
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 132%;
+  /* or 132px */
+  
+  
+  color: #20201F;
+}
+
+.content_block {
+  background: linear-gradient(104.32deg, #fffdff 4.45%, #b8bac2 99.15%);
+  /* border: 1px solid #919090; */
+  box-shadow: 40.663px 28.1589px 63.3575px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 1200px;
+  padding: 50px 50px;
+}
+
+.btn_auth {
+  /* position: absolute; */
+  margin: 0 auto;
+  left: 120px;
+  /* top: 50px; */
+}
+
+
+
 #container {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+
+  left: 120px;
+  top: 42px;
 }
 
 #inputs {
   display: flex;
+<<<<<<< HEAD
+  flex-direction: column;
+  /* align-items: center; */
+  /* height: 100px; */
+=======
   flex-direction:column;
+>>>>>>> 0592ba7cf70876caaedd2b3d454685191e88ac8f
 }
 
 input {
@@ -38,6 +100,58 @@ input {
   text-align: center;
 }
 
+<<<<<<< HEAD
+
+
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #000000;
+  background: #fdfdfd;
+/* background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%); */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 12px 12px 24px rgba(158, 163, 163, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 0px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  /* border: 6px solid #00FFCB; */
+  /* box-shadow: 0 0 60px rgba(0,255,203,.64); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  /* color: #313133; */
+  transform: translateY(-6px);
+}
+
+
+.logo {
+  max-width: 50px;
+  height: 50px;
+}
+
+
+=======
 #btn {
   margin: 50px;
   font-size: 24px;
@@ -45,9 +159,17 @@ input {
   background-color:ghostwhite;
   border:0px;
 }
-.formPage{
 
+#adoptContainer {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
 }
+
+/* #some {
+  display: flex;
+  align-items: center;
+} */
 /* #wall {
 background: linear-gradient(104.32deg, #FFFDFF 4.45%, #B8BAC2 99.15%);
 box-shadow: 40.663px 28.1589px 63.3575px rgba(0, 0, 0, 0.15);
@@ -59,8 +181,8 @@ margin: 0 auto;
 .mylabel{
   position: relative;
   display: block;
-  width: 60px;
-  height: 30px;
+  width: 32px;
+  height: 16px;
   margin-bottom: 15px;
   cursor: pointer;
 }
@@ -83,8 +205,8 @@ margin: 0 auto;
 .slidinggroove:after{
   position: absolute;
   content: "";
-  width: 28px;
-  height: 28px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #fff;
   top: 1px;
@@ -97,7 +219,7 @@ input:checked + .slidinggroove{
 }
 
 input:checked + .slidinggroove:after{
-transform: translateX(30px);
+transform: translateX(16px);
 }
 
 .labelterm{
@@ -130,3 +252,31 @@ transform: translateX(30px);
   display: flex;
   align-items: center;
 }
+.strCheckForm{
+  font-size: 20px;
+}
+.formPage{
+  width: 75%;
+  margin: 0 auto;
+}
+.three_names_input{
+  margin: 0px 5px;
+  padding: 0px 0px;
+  border-radius: 5px;
+  border: 3px solid rgb(145, 144, 144);
+}
+.titleForm{
+  text-align: center;
+}
+body{
+  font-family: ui-monospace;
+  background: linear-gradient(104.32deg, #FFFDFF 4.45%, #B8BAC2 99.15%);
+}
+.checkBoxis{
+  display: flex;
+  justify-content: center;
+}
+.titleCheckBox{
+  text-align: center;
+}
+>>>>>>> 0592ba7cf70876caaedd2b3d454685191e88ac8f
