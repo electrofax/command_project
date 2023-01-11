@@ -1,15 +1,16 @@
 
 const bcrypt = require('bcrypt');
 const renderTemplate = require('../lib/renderTamplate');
-const Login = require('../views/Login');
-const { User } = require('../db/models');
+const Auth = require('../views/Auth');
+const { User } = require('../../db/models');
 
-const renderLogin = (req, res) => {
-  renderTemplate(Login, null, res);
+const renderAuth = (req, res) => {
+  renderTemplate(Auth, null, res);
 };
 
 const loginUser = async (req, res) => {
   const { login, password } = req.body;
+  console.log(req.body);
   try {
     const user = await User.findOne({ where: { login } });
     if (user) {
@@ -17,10 +18,10 @@ const loginUser = async (req, res) => {
       if (passCheck) {
         req.session.userName = user.login;
         req.session.save(() => {
-          res.redirect('/');
+          res.redirect('/adopt');
         });
       } else {
-        res.redirect('/login');
+        res.redirect('/auth');
       }
     } else {
       res.redirect('/register');
@@ -30,4 +31,4 @@ const loginUser = async (req, res) => {
   }
 };
 
-module.exports = { renderLogin, loginUser };
+module.exports = { renderAuth, loginUser };
