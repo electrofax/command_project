@@ -1,7 +1,7 @@
 const forms = [
   {
     employee_name: 'Сотруник Сотрудникович',
-    mentor_name: 'Mentor Name1, Mentor Name1, Mentor Name1',
+    mentor_name: 'Mentor Name1',
     user_id: '2',
     pass_key: 'true',
     wifi: 'false',
@@ -22,7 +22,7 @@ const forms = [
   },
   {
     employee_name: 'Сотруник_2 Сотрудникович_2',
-    mentor_name: 'Mentor Name2, Mentor Name2, Mentor Name2',
+    mentor_name: 'Mentor Name2',
     user_id: '2',
     pass_key: 'false',
     wifi: 'false',
@@ -43,7 +43,7 @@ const forms = [
   },
   {
     employee_name: 'Сотруник_3 Сотрудникович_3',
-    mentor_name: 'Mentor Name3, Mentor Name3, Mentor Name3',
+    mentor_name: 'Mentor Name3',
     user_id: '2',
     pass_key: 'false',
     wifi: 'false',
@@ -64,7 +64,7 @@ const forms = [
   },
   {
     employee_name: 'Сотруник_4 Сотрудникович_4',
-    mentor_name: 'Mentor Name4, Mentor Name4, Mentor Name4',
+    mentor_name: 'Mentor Name4',
     user_id: '2',
     pass_key: 'false',
     wifi: 'false',

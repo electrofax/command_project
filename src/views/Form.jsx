@@ -4,6 +4,7 @@ const Layout = require("./Layout");
 function Forms({ user, fetchForm, one }) {
   return (
     <Layout user={user} fetchForm={fetchForm}>
+
       {one ? (
       <div classNameName="formPage">
         <div>
@@ -16,7 +17,9 @@ function Forms({ user, fetchForm, one }) {
             поэтому ты можешь закрывать пункты в удобном для тебя порядке.
           </p>
         </div>
-        <div className="checkBoxis">
+        <form method="" id="user-form">
+          <h5>Нужно подготовить твое рабочее место:</h5>
+
           <div>
             <form method="" id="user-form" action="/api/form">
               <h4 className="titleCheckBox">
@@ -109,20 +112,19 @@ function Forms({ user, fetchForm, one }) {
                       </p>
                     </label>
                   </div>
-                  <div>
-                    <label className="checkString">
-                      <div className="mylabel">
-                        <input name="stationery" type="checkbox" id="coding" />
-                        <div className="slidinggroove"></div>
-                      </div>
-                      <p className="strCheckForm">
-                        &nbsp;Напиши имена трех твоих коллег по отделу:
-                        <input
-                          className="three_names_input"
-                          name="three_names"
-                        ></input>
-                      </p>
-                    </label>
+
+                  <p>&nbsp;Ты написал(-а) сообщение в командный чат</p>
+                </label>
+              </li>
+              <li>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="three_names_check" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+
                   </div>
                 </div>
               </div>
