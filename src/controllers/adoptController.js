@@ -34,7 +34,7 @@ const allAdoptList = async (req, res) => {
   const all = await Form.findAll({ order: [['id', 'ASC']], raw: true});
 
     const some = await Form.findAll({ order : [['id', 'ASC']],
-     attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'link', 'three_names']}, raw: true
+     attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
     });
 
 
