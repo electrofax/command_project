@@ -143,3 +143,6 @@ transform: translateX(30px);
 .titleForm{
   text-align: center;
 }
+body{
+  background: linear-gradient(104.32deg, #FFFDFF 4.45%, #B8BAC2 99.15%);
+}
