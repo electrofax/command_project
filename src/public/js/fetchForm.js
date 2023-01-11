@@ -5,6 +5,7 @@ let url = '/api/form'
 //отправить феч на получение данных
 const resp = await fetchDataGet(url + '/1')
 
+
 for (let key in resp) {
     if(resp[key] === true) {
         el('input[name="' + key + '"]').checked = true

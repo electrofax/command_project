@@ -18,7 +18,7 @@ function Forms({ user, fetchForm, one }) {
         </div>
         <div className="checkBoxis">
           <div>
-            <form method="" id="user-form" action="/api/form">
+            <div id="user-form">
               <h4 className="titleCheckBox">
                 Нужно подготовить твое рабочее место:
               </h4>
@@ -112,7 +112,7 @@ function Forms({ user, fetchForm, one }) {
                   <div>
                     <label className="checkString">
                       <div className="mylabel">
-                        <input name="stationery" type="checkbox" id="coding" />
+                        <input name="three_names_check" type="checkbox" id="coding" />
                         <div className="slidinggroove"></div>
                       </div>
                       <p className="strCheckForm">
@@ -187,7 +187,7 @@ function Forms({ user, fetchForm, one }) {
                   </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
