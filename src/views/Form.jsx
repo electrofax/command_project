@@ -1,9 +1,9 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-function Form({ user }) {
+function Form({ user, fetchForm }) {
   return (
-    <Layout user={user}>
+    <Layout user={user} fetchForm={fetchForm}>
       <div>
         <div>
           <p>
@@ -14,7 +14,7 @@ function Form({ user }) {
             поэтому ты можешь закрывать пункты в удобном для тебя порядке.
           </p>
         </div>
-        <form method="" action="">
+        <form method="" id='user-form' action="/api/form">
           <h5>Нужно подготовить твое рабочее место:</h5>
           <div>
             <ul>
