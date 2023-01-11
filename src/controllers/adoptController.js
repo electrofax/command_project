@@ -1,12 +1,12 @@
 
 const renderTemplate = require('../lib/renderTamplate');
-const Admin = require('../views/Admin');
+const Adopt = require('../views/Adopt');
 const { Form } = require('../../db/models')
 
 
-const renderAdmin = async (req, res) => {
+const renderAdopt = async (req, res) => {
     const user = req.session?.userName;
-  renderTemplate(Admin, { user }, res);
+  renderTemplate(Adopt, { user }, res);
 };
 
 const addEmployee = async (req, res) => {
@@ -28,4 +28,4 @@ const addEmployee = async (req, res) => {
 
 
 
-module.exports = { renderAdmin, addEmployee };
+module.exports = { renderAdopt, addEmployee };
