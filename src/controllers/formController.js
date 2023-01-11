@@ -8,7 +8,7 @@ const renderForm = (req, res) => {
 
 const renderOneForm = async (req, res) => {
   try{
-  const one = await Form.findOne({ where: { id: req.params.id } });
+  const one = await Form.findOne({ where: { link: req.params.link } });
   renderTemplate(Forms, { one, fetchForm: true}, res);
 }catch(e) {
   res.status(400).send(`${e}`);
