@@ -21,4 +21,13 @@ async function fetchDataGet(url = '') {
   return response.json();
 }
 
-export { fetchData, fetchDataGet, el };
+function checkInput (arr) {
+    for(let key of arr) {
+        if (key.tagName === 'INPUT') {
+            return true
+        }
+    }
+    return false
+}
+
+export { fetchData, fetchDataGet, el, checkInput};
