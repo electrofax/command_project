@@ -5,11 +5,13 @@ function Auth () {
   return (
     <Layout>
       <link rel="stylesheet" href="/css/index.css" />
+      {/* <div className="content"> */}
+      {/* <div className="cont_card"> */}
+
+      <div className="content_block">
 
       <div className="form_cont">
-      
         <form action="/auth" method="post" className="loginForm">
-
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">Login</label>
             <input name="login" type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -18,10 +20,15 @@ function Auth () {
             <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
             <input name="password" type="text" className="form-control" id="exampleInputPassword1" />
           </div>
-          <button type="submit" className="btn btn-primary">Войти</button>
+          {/* <button type="submit" className="btn btn-primary">Войти</button> */}
+          <div className="btn">
+          <button type="submit" className="button">Войти</button>
+          </div>
         </form>
-
+        </div>
       </div>
+      {/* </div> */}
+      {/* </div> */}
     </Layout>
   );
 }

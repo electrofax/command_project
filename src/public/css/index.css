@@ -5,15 +5,69 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("../images/Retro\ Stripes\ in\ Blue\ Orange\ Wall\ Mural\ by\ PELAXY.jpeg");
-  background-size: 100%;
-  width: 500px;
-  height: 500px;
+  /* background: url("../img/Fon.png")0 0/100% auto no-repeat;
+  width: 1400px;
+  height: 1000px; */
 }
 
+.cont_card{
+  margin: 0 auto;
+  width: 80%;
+  height: 80%;
+
+}
+.content {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  background: url("../img/Fon.png") 0 0/100% auto no-repeat;
+  /* position: relative; */
+  width: 100%;
+  height: 1200px;
+
+  background: #d7d6d4;
+}
+.text_main{
+  /* position: absolute; */
+  /* width: 80%; */
+  height: 396px;
+  left: 120px;
+  top: 242px;
+  
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 132%;
+  /* or 132px */
+  
+  
+  color: #20201F;
+}
+
+.content_block {
+  background: linear-gradient(104.32deg, #fffdff 4.45%, #b8bac2 99.15%);
+  /* border: 1px solid #919090; */
+  box-shadow: 40.663px 28.1589px 63.3575px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  height: 1200px;
+  padding: 50px 50px;
+}
+
+.btn_auth {
+  /* position: absolute; */
+  margin: 0 auto;
+  left: 120px;
+  /* top: 50px; */
+}
+
+
+
 #container {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+
+  left: 120px;
+  top: 42px;
 }
 
 #inputs {
@@ -29,6 +83,55 @@ input {
 
 ::-webkit-input-placeholder {
   text-align: center;
+}
+
+
+
+
+.button {
+  min-width: 300px;
+  min-height: 60px;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  color: #000000;
+  background: #fdfdfd;
+/* background: linear-gradient(90deg, rgba(129,230,217,1) 0%, rgba(79,209,197,1) 100%); */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 12px 12px 24px rgba(158, 163, 163, 0.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 0px;
+  }
+
+button::before {
+content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  /* border: 6px solid #00FFCB; */
+  /* box-shadow: 0 0 60px rgba(0,255,203,.64); */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.button:hover, .button:focus {
+  /* color: #313133; */
+  transform: translateY(-6px);
+}
+
+
+.logo {
+  max-width: 50px;
+  height: 50px;
 }
 
 
