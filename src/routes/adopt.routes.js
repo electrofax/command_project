@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const { renderAdmin, addEmployee } = require('../controllers/adminControllers');
+const { renderAdopt, addEmployee } = require('../controllers/adoptController');
 
 router
-  .get('/', renderAdmin)
+  .get('/', renderAdopt)
   .post('/', addEmployee);
 
 module.exports = router;

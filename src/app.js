@@ -52,7 +52,7 @@ app.use((req, res, next) => {
   next();
 });
 
-const adminRoute = require('./routes/admin.routes');
+const adoptRoute = require('./routes/adopt.routes');
 const formRoute = require('./routes/form.routes');
 const updateForm = require('./routes/api/form.routes');
 // const loginRouter = require('./routes/login.routes');
@@ -61,8 +61,8 @@ const updateForm = require('./routes/api/form.routes');
 app.use('/form', formRoute);
 // app.use('/login', checkLogin, loginRouter)
 
-// route for Admin
-app.use('/admin', adminRoute);
+// route for page for User and Admin
+app.use('/adopt', adoptRoute);
 app.use('/api/form', updateForm);
 
 

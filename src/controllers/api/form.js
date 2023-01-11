@@ -7,7 +7,7 @@ const updateForm = async (req, res) => {
 
     let id = 1;
     const { employee_name, pass_key } = req.body
-
+    
     Form.update(
         { pass_key: pass_key },
         { where: { id: id }, raw: true, returning: true }

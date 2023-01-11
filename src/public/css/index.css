@@ -1,13 +1,20 @@
 
-.backgroundImg {
+/* .backgroundImg {
   margin-top: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('../images/Retro\ Stripes\ in\ Blue\ Orange\ Wall\ Mural\ by\ PELAXY.jpeg');
-background-size:100%;
-  width: 500px;
+  background-image: url('../images/office.jpeg');
+background-size:10%;
+  width: 700px;
   height: 500px;
+} */
+
+.backgroundImg {
+  margin-top: 15vh;
+  width: 500px;
+  height: fit-content;
+  border: 2px solid ghostwhite;
 }
 
 #container {
@@ -18,14 +25,32 @@ background-size:100%;
 #inputs {
   display: flex;
   flex-direction:column;
-  /* align-items: center; */
-  /* height: 100px; */
 }
 
 input {
   margin: 5px;
+  padding: 2px 100px;
+  border-radius: 5px;
+  border: 3px solid ghostwhite;
 }
 
 ::-webkit-input-placeholder {
   text-align: center;
 }
+
+#btn {
+  margin: 50px;
+  font-size: 24px;
+  border-radius: 10px 1px 10px 1px;
+  background-color:ghostwhite;
+  border:0px;
+}
+
+/* #wall {
+background: linear-gradient(104.32deg, #FFFDFF 4.45%, #B8BAC2 99.15%);
+box-shadow: 40.663px 28.1589px 63.3575px rgba(0, 0, 0, 0.15);
+border-radius: 18.8281px;
+width: 100%;
+height: 800px;
+margin: 0 auto;
+} */
