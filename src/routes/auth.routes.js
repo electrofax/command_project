@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const { renderLogin, loginUser } = require('../controllers/loginConrollers');
+const { renderAuth, loginUser } = require('../controllers/authConrollers');
 
 router
-  .get('/', renderLogin)
+  .get('/', renderAuth)
   .post('/', loginUser);
 
 module.exports = router;

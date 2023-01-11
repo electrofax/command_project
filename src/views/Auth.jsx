@@ -1,15 +1,14 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-function Login() {
+function Auth () {
   return (
     <Layout>
-      <script defer src="js/homePost.js" />
       <link rel="stylesheet" href="/css/index.css" />
 
       <div className="form_cont">
       
-        <form action="/login" method="post" className="loginForm">
+        <form action="/auth" method="post" className="loginForm">
 
           <div className="mb-3">
             <label htmlFor="exampleInputEmail1" className="form-label">Login</label>
@@ -27,4 +26,4 @@ function Login() {
   );
 }
 
-module.exports = Login;
+module.exports = Auth;
