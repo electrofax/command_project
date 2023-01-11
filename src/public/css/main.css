@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+.mainPage {
+  position: absolute;
+  width: 878px;
+  height: 396px;
+  left: 120px;
+  top: 342px;
+
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 132%;
+  /* or 132px */
+
+  color: #20201f;
+}

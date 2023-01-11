@@ -2,7 +2,6 @@ const React = require('react');
 
 function Layout ( { children, user, fetchForm } ) {
   console.log(fetchForm)
-
   return (
     <html lang="en">
       <head>
@@ -15,16 +14,18 @@ function Layout ( { children, user, fetchForm } ) {
         {fetchForm && <script type='module' src='/js/helper.js'/>}
         {fetchForm && <script type='module' src='/js/fetchForm.js'/>}
         <title>Document</title>
-      </head> 
-      
+      </head>
       {user ? (
-      <><nav className="navbar navbar-expand-lg bg-light">
+        <><nav className="navbar navbar-expand-lg bg-light">
           <div className="container-fluid">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="logo">
+              <img src="./img/logo.png" className="img-fluid" alt="..."></img>
+                </li>
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
@@ -43,34 +44,29 @@ function Layout ( { children, user, fetchForm } ) {
         </nav><body>
             {children}
           </body></>
-      ): ( 
-
-      <><nav className="navbar navbar-expand-lg bg-light">
-            <div className="container-fluid">
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon" />
-              </button>
-              <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/">Home</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/login">Login</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/register">Registrations</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="/test">TEST str</a>
-                  </li>
-                </ul>
-              </div>
+      ) : (
+        <><nav className="navbar navbar-expand-lg bg-light">
+          <div className="container-fluid">
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon" />
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+              <li className="logo">
+              <img src="./img/logo.png" className="img-fluid" alt="..."></img>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href='#'>ООО Высокая гора</a>
+                </li>
+              </ul>
             </div>
-          </nav>
-          <body>
-              {children}
-            </body></>
+          </div>
+        </nav><body>
+            {children}
+          </body></>
       )}
     </html>
   );
