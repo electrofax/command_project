@@ -45,9 +45,17 @@ input {
   background-color:ghostwhite;
   border:0px;
 }
-.formPage{
 
+#adoptContainer {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
 }
+
+/* #some {
+  display: flex;
+  align-items: center;
+} */
 /* #wall {
 background: linear-gradient(104.32deg, #FFFDFF 4.45%, #B8BAC2 99.15%);
 box-shadow: 40.663px 28.1589px 63.3575px rgba(0, 0, 0, 0.15);
