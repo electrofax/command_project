@@ -4,7 +4,7 @@ const Layout = require("./Layout");
 function Form({ user, fetchForm }) {
   return (
     <Layout user={user} fetchForm={fetchForm}>
-      <div classNameName="formPage">
+      <div className="formPage">
         <div>
           <p>
             Привет, Имя Фамилия! И добро пожаловать в команду Высокогорья!
@@ -14,7 +14,7 @@ function Form({ user, fetchForm }) {
             поэтому ты можешь закрывать пункты в удобном для тебя порядке.
           </p>
         </div>
-        <form method="" id="user-form" action="/api/form">
+        <form method="" id="user-form">
           <h5>Нужно подготовить твое рабочее место:</h5>
           <div>
             <ul>
@@ -113,7 +113,7 @@ function Form({ user, fetchForm }) {
               <li>
                 <label className="checkString">
                   <div className="mylabel">
-                    <input name="stationery" type="checkbox" id="coding" />
+                    <input name="three_names_check" type="checkbox" id="coding" />
                     <div className="slidinggroove">
                       <span className="ontext">Yes</span>
                       <span className="offtext">No</span>
