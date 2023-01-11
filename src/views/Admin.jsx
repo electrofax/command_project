@@ -4,6 +4,8 @@ const Layout = require('./Layout');
 module.exports = function Admin({ user }) {
   return (
     <Layout user={user}>
+          <div className="content_block">
+
       <h1>AdminsPage {user}</h1>
       <div id="container">
           <div className="backgroundImg">
@@ -15,6 +17,7 @@ module.exports = function Admin({ user }) {
             </div>
             </form>
           </div>
+      </div>
       </div>
       <link defer rel="stylesheet" href="/css/index.css" />
     </Layout>

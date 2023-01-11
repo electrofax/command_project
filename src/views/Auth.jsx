@@ -5,8 +5,6 @@ function Auth () {
   return (
     <Layout>
       <link rel="stylesheet" href="/css/index.css" />
-      {/* <div className="content"> */}
-      {/* <div className="cont_card"> */}
 
       <div className="content_block">
 
@@ -27,8 +25,6 @@ function Auth () {
         </form>
         </div>
       </div>
-      {/* </div> */}
-      {/* </div> */}
     </Layout>
   );
 }
