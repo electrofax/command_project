@@ -1,1 +1,1 @@
-import { fetchData, fetchDataGet, getEl } from './helper.js';
+import { fetchData, fetchDataGet, el } from './helper.js';
