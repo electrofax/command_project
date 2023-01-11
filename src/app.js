@@ -55,6 +55,7 @@ app.use((req, res, next) => {
 const adoptRoute = require('./routes/adopt.routes');
 const formRoute = require('./routes/form.routes');
 const updateForm = require('./routes/api/form.routes');
+const getForm = require('./routes/api/form.routes');
 // const loginRouter = require('./routes/login.routes');
 
 
@@ -65,6 +66,9 @@ app.use('/form', formRoute);
 app.use('/adopt', adoptRoute);
 app.use('/api/form', updateForm);
 
+//api routes
+app.use('/api/form', updateForm);
+app.use('/api/form', getForm);
 
 // * пишем выход
 app.get('/logout', checkUser, (req, res) => { 
