@@ -4,7 +4,7 @@ const Layout = require("./Layout");
 function Form({ user, fetchForm }) {
   return (
     <Layout user={user} fetchForm={fetchForm}>
-      <div>
+      <div classNameName="formPage">
         <div>
           <p>
             Привет, Имя Фамилия! И добро пожаловать в команду Высокогорья!
@@ -14,179 +14,177 @@ function Form({ user, fetchForm }) {
             поэтому ты можешь закрывать пункты в удобном для тебя порядке.
           </p>
         </div>
-        <form method="" id='user-form' action="/api/form">
+        <form method="" id="user-form" action="/api/form">
           <h5>Нужно подготовить твое рабочее место:</h5>
           <div>
             <ul>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="pass_key"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Наставник выдал мне пропуск
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="pass_key" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Наставник выдал мне пропуск</p>
+                </label>
               </li>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input type="checkbox" name="wifi" class="real-checkbox" />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Наставник сообщил пароль от Wi-Fi
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="wifi" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Наставник сообщил пароль от Wi-Fi </p>
+                </label>
               </li>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="laptop"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Системный администратор выдал мне ноутбук
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="laptop" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Системный администратор выдал мне ноутбук </p>
+                </label>
               </li>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="email_pass"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Системный администратор выдал мне доступы к почте
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="email_pass" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Системный администратор выдал мне доступы к почте</p>
+                </label>
               </li>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="stationery"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="stationery" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>
                     &nbsp;Ты отправил(-а) офис-менеджеру на почту список
                     необходимой для тебя канцелярии
-                  </label>
-                </div>
+                  </p>
+                </label>
               </li>
             </ul>
           </div>
-          <h5>Важно познакомиться с коллегами: :</h5>
-          <div method="" action="">
+          <h5>Важно познакомиться с коллегами:</h5>
+          <div>
             <ul>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="meet_head"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Ты познакомился (-ась) со своим руководителем
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="meet_head" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Ты познакомился (-ась) со своим руководителем</p>
+                </label>
               </li>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="chattochat"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Ты написал(-а) сообщение в командный чат
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="chattochat" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Ты написал(-а) сообщение в командный чат</p>
+                </label>
               </li>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="stationery"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Напиши имена трех твоих коллег по отделу:&nbsp;
-                    <input name="three_names"></input>
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="stationery" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>
+                    &nbsp;Напиши имена трех твоих коллег по отделу:
+                    <input className="three_names_input" name="three_names"></input>
+                  </p>
+                </label>
               </li>
             </ul>
           </div>
-          <h5>Важно пройти оформление в отделе кадров: :</h5>
+          <h5>Важно пройти оформление в отделе кадров:</h5>
           <div method="" action="">
             <ul>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="skans_of_docks"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="skans_of_docks" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>
                     &nbsp;Ты отправил (-а) сканы документы на оформление в отдел
                     кадров
-                  </label>
-                </div>
+                  </p>
+                </label>
               </li>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="com_secret"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Ты подписал (-а) соглашение о коммерческой тайне
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="com_secret" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Ты подписал (-а) соглашение о коммерческой тайне</p>
+                </label>
               </li>
             </ul>
           </div>
-          <h5>А теперь самое время работать: :</h5>
+          <h5>А теперь самое время работать:</h5>
           <div method="" action="">
             <ul>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="com_secret"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Получи свою первую задачу у руководителя
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="first_task" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Получи свою первую задачу у руководителя</p>
+                </label>
               </li>
               <li>
-                <div class="form-group">
-                  <label>
-                    <input
-                      type="checkbox"
-                      name="com_secret"
-                      class="real-checkbox"
-                    />
-                    <span class="custom-checkbox"></span>
-                    &nbsp;Создай подпись в почте по корпоративному шаблону
-                  </label>
-                </div>
+                <label className="checkString">
+                  <div className="mylabel">
+                    <input name="email_sign" type="checkbox" id="coding" />
+                    <div className="slidinggroove">
+                      <span className="ontext">Yes</span>
+                      <span className="offtext">No</span>
+                    </div>
+                  </div>
+                  <p>&nbsp;Создай подпись в почте по корпоративному шаблону</p>
+                </label>
               </li>
             </ul>
           </div>

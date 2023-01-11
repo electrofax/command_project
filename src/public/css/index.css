@@ -45,7 +45,9 @@ input {
   background-color:ghostwhite;
   border:0px;
 }
+.formPage{
 
+}
 /* #wall {
 background: linear-gradient(104.32deg, #FFFDFF 4.45%, #B8BAC2 99.15%);
 box-shadow: 40.663px 28.1589px 63.3575px rgba(0, 0, 0, 0.15);
@@ -54,3 +56,77 @@ width: 100%;
 height: 800px;
 margin: 0 auto;
 } */
+.mylabel{
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 30px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.mylabel input{
+  display: none;
+}
+
+.slidinggroove{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #ababab;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.slidinggroove:after{
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  top: 1px;
+  left: 1px;
+  transition: all 0.3s ease;
+}
+
+input:checked + .slidinggroove{
+  background: #5fcf80;
+}
+
+input:checked + .slidinggroove:after{
+transform: translateX(30px);
+}
+
+.labelterm{
+  position: relative;
+  top: 5px;
+  margin-left: 65px;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+}
+
+.ontext{
+  position: absolute;
+  top: 10px;
+  left: 7px;
+  font-size: 9px;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.offtext{
+  position: absolute;
+  top: 10px;
+  left: 36px;
+  font-size: 9px;
+  color: #333333;
+  font-family: 'Roboto', sans-serif;
+}
+.checkString{
+  display: flex;
+  align-items: center;
+}
