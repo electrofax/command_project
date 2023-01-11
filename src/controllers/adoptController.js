@@ -21,7 +21,7 @@ const addEmployee = async (req, res) => {
       employee_name, mentor_name, user_id: 1
     });
     // res.json({ created: true, first: `${title}`, message: `${body}` });
-    // res.redirect('/post');
+    res.redirect('/adopt/all');
   } catch (e) {
     res.status(400).send(`${e}`);
   }
