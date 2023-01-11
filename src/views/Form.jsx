@@ -167,7 +167,7 @@ function Form({ user, fetchForm }) {
                   <label>
                     <input
                       type="checkbox"
-                      name="com_secret"
+                      name="first_task"
                       class="real-checkbox"
                     />
                     <span class="custom-checkbox"></span>
@@ -180,7 +180,7 @@ function Form({ user, fetchForm }) {
                   <label>
                     <input
                       type="checkbox"
-                      name="com_secret"
+                      name="email_sign"
                       class="real-checkbox"
                     />
                     <span class="custom-checkbox"></span>
