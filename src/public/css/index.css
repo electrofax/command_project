@@ -5,24 +5,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   /* background: url("../img/Fon.png")0 0/100% auto no-repeat;
   width: 1400px;
   height: 1000px; */
-=======
-  background-image: url('../images/office.jpeg');
-background-size:10%;
-  width: 700px;
-  height: 500px;
-} */
-
-.backgroundImg {
-  margin-top: 15vh;
-  width: 500px;
-  height: fit-content;
-  border: 2px solid ghostwhite;
->>>>>>> 0592ba7cf70876caaedd2b3d454685191e88ac8f
-}
+/* } */
 
 .cont_card{
   margin: 0 auto;
@@ -86,13 +72,9 @@ background-size:10%;
 
 #inputs {
   display: flex;
-<<<<<<< HEAD
   flex-direction: column;
   /* align-items: center; */
   /* height: 100px; */
-=======
-  flex-direction:column;
->>>>>>> 0592ba7cf70876caaedd2b3d454685191e88ac8f
 }
 
 input {
@@ -106,7 +88,6 @@ input {
   text-align: center;
 }
 
-<<<<<<< HEAD
 
 
 
@@ -157,132 +138,3 @@ content: '';
 }
 
 
-=======
-#btn {
-  margin: 50px;
-  font-size: 24px;
-  border-radius: 10px 1px 10px 1px;
-  background-color:ghostwhite;
-  border:0px;
-}
-
-#adoptContainer {
-  display: flex;
-  flex-direction:row;
-  justify-content: space-around;
-}
-
-/* #some {
-  display: flex;
-  align-items: center;
-} */
-/* #wall {
-background: linear-gradient(104.32deg, #FFFDFF 4.45%, #B8BAC2 99.15%);
-box-shadow: 40.663px 28.1589px 63.3575px rgba(0, 0, 0, 0.15);
-border-radius: 18.8281px;
-width: 100%;
-height: 800px;
-margin: 0 auto;
-} */
-.mylabel{
-  position: relative;
-  display: block;
-  width: 32px;
-  height: 16px;
-  margin-bottom: 15px;
-  cursor: pointer;
-}
-
-.mylabel input{
-  display: none;
-}
-
-.slidinggroove{
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #ababab;
-  border-radius: 20px;
-  transition: all 0.3s ease;
-}
-
-.slidinggroove:after{
-  position: absolute;
-  content: "";
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #fff;
-  top: 1px;
-  left: 1px;
-  transition: all 0.3s ease;
-}
-
-input:checked + .slidinggroove{
-  background: #5fcf80;
-}
-
-input:checked + .slidinggroove:after{
-transform: translateX(16px);
-}
-
-.labelterm{
-  position: relative;
-  top: 5px;
-  margin-left: 65px;
-  font-size: 16px;
-  color: #222;
-  font-family: 'Roboto', sans-serif;
-}
-
-.ontext{
-  position: absolute;
-  top: 10px;
-  left: 7px;
-  font-size: 9px;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-}
-
-.offtext{
-  position: absolute;
-  top: 10px;
-  left: 36px;
-  font-size: 9px;
-  color: #333333;
-  font-family: 'Roboto', sans-serif;
-}
-.checkString{
-  display: flex;
-  align-items: center;
-}
-.strCheckForm{
-  font-size: 20px;
-}
-.formPage{
-  width: 75%;
-  margin: 0 auto;
-}
-.three_names_input{
-  margin: 0px 5px;
-  padding: 0px 0px;
-  border-radius: 5px;
-  border: 3px solid rgb(145, 144, 144);
-}
-.titleForm{
-  text-align: center;
-}
-body{
-  font-family: ui-monospace;
-  background: linear-gradient(104.32deg, #FFFDFF 4.45%, #B8BAC2 99.15%);
-}
-.checkBoxis{
-  display: flex;
-  justify-content: center;
-}
-.titleCheckBox{
-  text-align: center;
-}
->>>>>>> 0592ba7cf70876caaedd2b3d454685191e88ac8f
