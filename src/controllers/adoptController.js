@@ -16,9 +16,11 @@ const addEmployee = async (req, res) => {
   } = req.body;
   console.log('reqBODY=>>', req.body);
   // if (title && body) {
+let link = (Math.random() + 1).toString(36).substring(2);
+
   try {
     await Form.create({
-      employee_name, mentor_name, user_id: 1
+      employee_name, mentor_name, user_id: 1, link
     });
     // res.json({ created: true, first: `${title}`, message: `${body}` });
     res.redirect('/adopt/all');
