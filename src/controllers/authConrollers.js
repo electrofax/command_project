@@ -18,7 +18,7 @@ const loginUser = async (req, res) => {
       if (passCheck) {
         req.session.userName = user.login;
         req.session.save(() => {
-          res.redirect('/admin');
+          res.redirect('/adopt');
         });
       } else {
         res.redirect('/auth');
