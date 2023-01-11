@@ -1,6 +1,6 @@
 const { Form } = require('../../../db/models');
 
-const updateForm = async (req, res) => {
+const updateForm = (req, res) => {
 
     const { link } = req.params
 
@@ -24,7 +24,7 @@ const updateForm = async (req, res) => {
         .catch((error) => res.status(500).json({ message: error.message }));
 };
 
-const getForm = async (req, res) => {
+const getForm = (req, res) => {
 
    const { link } = req.params
 
