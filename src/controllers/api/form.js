@@ -1,7 +1,7 @@
 const { Form } = require('../../../db/models');
 
 const updateForm = async (req, res) => {
-    let id = 2;
+    let id = 1;
 
     let key = Object.keys(req.body)[0]
     let value = req.body[ Object.keys(req.body)[0] ] 
@@ -36,8 +36,7 @@ const getForm = async (req, res) => {
           ? res.json(updatedPost)
           : res.status(400).json({ res: `cant get form with ${id}` });
       })
-      .catch((error) => res.status(500).json({ message: error.message }));
-  
+      .catch((error) => res.status(500).json({ message: error.message }));  
 };
 
 module.exports = { updateForm, getForm };
