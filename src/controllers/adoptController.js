@@ -19,7 +19,7 @@ const addEmployee = async (req, res) => {
   try {
     await Form.create({
       employee_name, mentor_name, user_id: 1
-    });
+    })
     // res.json({ created: true, first: `${title}`, message: `${body}` });
     res.redirect('/adopt/all');
   } catch (e) {
