@@ -4,7 +4,8 @@ const Layout = require("./Layout");
 function Forms({ user, fetchForm, one }) {
   return (
     <Layout user={user} fetchForm={fetchForm}>
-      <div className="formPage">
+      {one ? (
+      <div classNameName="formPage">
         <div>
           <p>
             Привет, {one.employee_name}! И добро пожаловать в команду Высокогорья!
@@ -192,7 +193,7 @@ function Forms({ user, fetchForm, one }) {
       </div>
       )  : ( 
         <h1>Вас не существует</h1>
-      )
+      )}
     </Layout>
   );
 }
