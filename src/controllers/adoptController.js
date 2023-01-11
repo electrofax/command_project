@@ -36,19 +36,7 @@ const allAdoptList = async (req, res) => {
     });
 
 
-console.log('ssss', some)
-
-  // const isBool = Object.fromEntries(
-  //   // преобразовать в массив, затем map, затем fromEntries обратно объект
-  //   Object.entries(all[4]).map(([key, value]) => [key, typeof(value)=== 'boolean'])
-  // );
-  // const procent = Object.values(isBool);
-  // const mapped = procent.filter((el) =>  el === true)
-  // console.log(isBool)
-  // console.log('truuuuuue', procent)
-  // console.log('mappped', mapped)
-  // console.log(JSON.stringify(all[1]))
-  
+console.log('ssss', some)  
     renderTemplate(AdoptAll, { all, some }, res);
   } catch(e) {
     res.status(400).send(`${e}`);
