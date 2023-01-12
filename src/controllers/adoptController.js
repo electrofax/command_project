@@ -65,7 +65,7 @@ const oneAdoptList = async (req, res) => {
     attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
     });
 
-    console.log('usssssser', log)
+    console.log('usssssser', user)
     console.log('usssssserdbbbbb', userFromDb.id)
     console.log('finndddd', findOneUser)
     console.log('someeeeeeeeeeee', some)
