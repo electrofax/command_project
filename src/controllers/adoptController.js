@@ -18,6 +18,7 @@ const addEmployee = async (req, res) => {
   // if (title && body) {
 let link = (Math.random() + 1).toString(36).substring(2);
 
+
   try {
     await Form.create({
       employee_name, mentor_name, user_id: 1, link
