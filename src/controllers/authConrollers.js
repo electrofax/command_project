@@ -24,6 +24,7 @@ const loginUser = async (req, res) => {
           res.redirect('/adopt');
         });
       } else {
+        
         renderTemplate(Error, { message: 'Пароль Не Верный'}, res)
         // res.redirect('/auth');
       }
