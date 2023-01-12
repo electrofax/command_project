@@ -15,7 +15,7 @@ const addEmployee = async (req, res) => {
   const {
     employee_name, mentor_name,
   } = req.body;
-  console.log('reqBODY=>>', req.body);
+  // console.log('reqBODY=>>', req.body);
   // if (title && body) {
 let link = (Math.random() + 1).toString(36).substring(2);
 
@@ -41,7 +41,7 @@ const allAdoptList = async (req, res) => {
     });
 
 
-console.log('ssss', some)  
+// console.log('ssss', some)  
     renderTemplate(AdoptAll, { all, some, user }, res);
   } catch(e) {
     res.status(400).send(`${e}`);
@@ -50,7 +50,7 @@ console.log('ssss', some)
 
 const oneAdoptList = async (req, res) => {
   try {
-    const user = req.session.userName;
+    const user = req.session?.userName;
     const userFromDb = await User.findOne({ where : { login: user}, raw: true })
     const findOneUser = await Form.findAll({ order : [['id', 'ASC']], where : { user_id: userFromDb.id}, raw: true})
 
@@ -58,11 +58,11 @@ const oneAdoptList = async (req, res) => {
      attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
     });
 
-    console.log('usssssser', user)
-    console.log('usssssserdbbbbb', userFromDb.id)
-    console.log('finndddd', findOneUser)
-    console.log('someeeeeeeeeeee', some)
-    renderTemplate(AdoptOne, { findOneUser, some }, res);
+    // console.log('usssssser', user)
+    // console.log('usssssserdbbbbb', userFromDb.id)
+    // console.log('finndddd', findOneUser)
+    // console.log('someeeeeeeeeeee', some)
+    renderTemplate(AdoptOne, { user, findOneUser, some }, res);
     // res.send('heeee')
   } catch(e){
     res.status(400).send(`${e}`);

@@ -2,17 +2,17 @@ const React = require('react');
 const Layout = require('./Layout');
 
 function AdoptAll(props) {
-  const { findOneUser, some } = props;
+  const { findOneUser, some, user } = props;
   const isBool = function(arr) {
     return Object.entries(arr).map(([key, value]) => [key, (value)=== true])
   };
   const procent = Object.values(isBool);
   const mapped = procent.filter((el) =>  el === true)
   const sum = mapped.length
-  console.log(some)
-  console.log('-------')
+  // console.log(some)
+  // console.log('-------')
   return (
-    <Layout>
+    <Layout user={user}>
       <h1>Мои листки адаптации</h1>
       <div id="adoptContainer">
       <div id="mappedList" style={{'width': 
