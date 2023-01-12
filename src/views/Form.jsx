@@ -8,17 +8,17 @@ function Forms({ user, fetchForm, one }) {
       <div classNameName="formPage">
         <div>
           <p>
-            Привет, {one.employee_name}! И добро пожаловать в команду Высокогорья!
+            Привет, <b>{one.employee_name}</b>! И добро пожаловать в команду Высокогорья!
 
             Впереди нас ждет интересное путешествие в мир нашей компании, и
-            самым главным проводником будет- {one.mentor_name}. Мы подготовили для тебя
+            самым главным проводником будет- <b>{one.mentor_name}</b>. Мы подготовили для тебя
             чек-лист на первый день. Процесс выполнения будет сохраняться,
             поэтому ты можешь закрывать пункты в удобном для тебя порядке.
           </p>
         </div>
         <div className="checkBoxis">
           <div>
-            <form method="" id="user-form" action="/api/form">
+            <div id="user-form">
               <h4 className="titleCheckBox">
                 Нужно подготовить твое рабочее место:
               </h4>
@@ -112,7 +112,7 @@ function Forms({ user, fetchForm, one }) {
                   <div>
                     <label className="checkString">
                       <div className="mylabel">
-                        <input name="stationery" type="checkbox" id="coding" />
+                        <input name="three_names_check" type="checkbox" id="coding" />
                         <div className="slidinggroove"></div>
                       </div>
                       <p className="strCheckForm">
@@ -187,7 +187,7 @@ function Forms({ user, fetchForm, one }) {
                   </div>
                 </div>
               </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>

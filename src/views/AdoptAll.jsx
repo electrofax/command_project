@@ -22,7 +22,7 @@ function AdoptAll(props) {
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} key={list.id} id="name">
           {list.employee_name}
           <div id="checkProgress">
-            <a href={`/form/${list.id}`}>
+            <a href={`/form/${list.link}`}>
           <button type="click">Проверить</button>
           </a>
         </div>
