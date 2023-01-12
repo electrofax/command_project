@@ -58,6 +58,7 @@ const authRouter = require('./routes/auth.routes');
 const mainPageRouter = require('./routes/mainPage.routes')
 const registerRouter = require('./routes/register.routes')
 const overviewRouter = require('./routes/overview.routes')
+const resetPswdRouter = require('./routes/resetPswd.routes')
 
 app.use('/', mainPageRouter )
 app.use('/form', formRoute);
@@ -70,6 +71,9 @@ app.use('/api/form', updateForm);
 
 // routes for user's overview 
 app.use('/overview', overviewRouter)
+
+// route for reset password
+app.use('/reset', resetPswdRouter)
 
 //api routes
 app.use('/api/form', updateForm);

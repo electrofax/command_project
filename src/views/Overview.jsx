@@ -48,6 +48,11 @@ function Overview(props) {
               <h5 className="card-title">{hr.id}</h5>
               <p className="card-text">{hr.login}</p>
             </div> */}
+            <div id="checkProgress">
+            <a href={`/reset/${hr.id}`}>
+          <button type="click">Проверить</button>
+          </a>
+        </div>
           </div>
         ))}
       </div>
