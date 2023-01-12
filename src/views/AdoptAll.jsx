@@ -51,28 +51,3 @@ function AdoptAll(props) {
 };
 
 module.exports = AdoptAll;
-
-
-// {posts.map((post) => (
-//   <div
-//     id="formPosts"
-//     className="card text-bg-secondary mb-3"
-//     style={{ width: '18rem' }}
-//     key={post.id}
-//   >
-//     <div className="card-header">
-//       {post.id}
-//       .
-//       {' '}
-//       {post.User.name}
-//     </div>
-//     <div className="card-body">
-//       <h5 className="card-title">{post.title}</h5>
-//       <p className="card-text">{post.body}</p>
-//       <div id="functional">
-//         <button id="edit" type="button" data-editid={post.id}>edit</button>
-//         <button id="delete" type="button" data-deleteid={post.id}>delete</button>
-//       </div>
-//     </div>
-//   </div>
-// ))}
