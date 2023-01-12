@@ -202,8 +202,8 @@ button::before {
 .slidinggroove:after{
   position: absolute;
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #fff;
   top: 1px;
@@ -221,7 +221,20 @@ transform: translateX(16px);
 
 .labelterm{
   position: relative;
-  padding: 0px;
+  top: 5px;
+  margin-left: 65px;
+  font-size: 16px;
+  color: #222;
+  font-family: 'Roboto', sans-serif;
+}
+
+.mylabel {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 16px;
+    margin-bottom: 15px;
+    cursor: pointer;
 }
 
 button::before {
@@ -274,4 +287,8 @@ body{
 }
 .titleCheckBox{
   text-align: center;
+}
+.checkString{
+  display: flex;
+  align-items: center;
 }
