@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Layout({ children, user, fetchForm}) {
+function Layout({ children, user, fetchForm }) {
   return (
     <html lang="en">
       <head>
@@ -14,6 +14,7 @@ function Layout({ children, user, fetchForm}) {
         {fetchForm && <script type='module' src='/js/fetchForm.js' />}
         <title>Document</title>
       </head>
+      
       {user ? (
         <nav className="navbar navbar-expand-lg nav-color">
           <div className="container-fluid">
@@ -26,22 +27,22 @@ function Layout({ children, user, fetchForm}) {
                   <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
                 <li className="nav-item pull-right">
-                  <a className="nav-link active " aria-current="page">Приветствую,{user}</a>
+                  <a className="nav-link active " aria-current="page">{user}</a>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/logout">Выход</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/adopt"><button type="submit" className="button_nav out_btn">Создать Лист Адаптации</button></a>
+                  <a className="nav-link active" aria-current="page" href="/adopt">Создать Лист Адаптации</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/adopt/all"><button type="submit" className="button_nav">Все Листы Адаптации</button></a>
+                  <a className="nav-link active" aria-current="page" href="/adopt/all">Все Листы Адаптации</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/adopt/one"><button type="submit" className="button_nav">Мои Листы Адаптации</button></a>
+                  <a className="nav-link active" aria-current="page" href="/adopt/one">Мои Листы Адаптации</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/overview"><button type="submit" className="button_nav">Все Пользователи</button></a>
+                  <a className="nav-link active" aria-current="page" href="/overview">Все Пользователи</a>
                 </li>
               </ul>
             </div>
@@ -65,13 +66,13 @@ function Layout({ children, user, fetchForm}) {
                   <a className="nav-link active" aria-current="page" href="/logout">Выход</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/adopt"><button type="submit" className="button_nav out_btn">Создать Лист Адаптации</button></a>
+                  <a className="nav-link active" aria-current="page" href="/adopt">Создать Лист Адаптации</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/adopt/all"><button type="submit" className="button_nav">Все Листы Адаптации</button></a>
+                  <a className="nav-link active" aria-current="page" href="/adopt/all">Все Листы Адаптации</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/adopt/one"><button type="submit" className="button_nav">Мои Листы Адаптации</button></a>
+                  <a className="nav-link active" aria-current="page" href="/adopt/one">Мои Листы Адаптации</a>
                 </li>
               </ul>
             </div>
