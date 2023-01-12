@@ -1,6 +1,9 @@
+const ReactDOMServer = require('react-dom/server');
+const React = require('react');
 const bcrypt = require('bcrypt');
 const renderTemplate = require('../lib/renderTamplate');
 const Register = require('../views/Register');
+const Error = require('../views/Error')
 
 const { User } = require('../../db/models');
 
@@ -13,6 +16,7 @@ const renderRegister = (req, res) => {
 
 // функция обрабочтик формы
 const regUser = async (req, res) => {
+  const user = req.session?.userName;
   const { login, email, password, name, isAdmin } = req.body;
   console.log(req.body);
   try {
@@ -20,7 +24,7 @@ const regUser = async (req, res) => {
     await User.create({ login, email, password: hash, name, isAdmin });
       res.redirect('/admin');
   } catch (error) {
-    res.send(`Error ------> ${error}`);
+    renderTemplate(Error, { message: 'Ошибка, данные введены не верно', user}, res)
   }
 };
 

@@ -71,4 +71,3 @@ function Register({ user }) {
 }
 
 module.exports = Register;
-``
