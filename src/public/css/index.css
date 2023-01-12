@@ -80,13 +80,7 @@ background-size:10%;
 
 #inputs {
   display: flex;
-<<<<<<< HEAD
-  flex-direction: column;
-  /* align-items: center; */
-  /* height: 100px; */
-=======
   flex-direction:column;
->>>>>>> 0592ba7cf70876caaedd2b3d454685191e88ac8f
 }
 
 input {
@@ -100,7 +94,6 @@ input {
   text-align: center;
 }
 
-<<<<<<< HEAD
 
 
 
@@ -151,7 +144,6 @@ content: '';
 }
 
 
-=======
 #btn {
   margin: 50px;
   font-size: 24px;
@@ -205,8 +197,8 @@ margin: 0 auto;
 .slidinggroove:after{
   position: absolute;
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: #fff;
   top: 1px;
@@ -279,4 +271,3 @@ body{
 .titleCheckBox{
   text-align: center;
 }
->>>>>>> 0592ba7cf70876caaedd2b3d454685191e88ac8f
