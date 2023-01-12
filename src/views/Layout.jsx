@@ -1,6 +1,6 @@
 const React = require('react');
 
-function Layout({ children, user, fetchForm, admin }) {
+function Layout({ children, user, fetchForm}) {
   return (
     <html lang="en">
       <head>

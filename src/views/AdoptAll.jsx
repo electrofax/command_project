@@ -18,7 +18,6 @@ function AdoptAll(props) {
       <div id="mappedList" style={{'width': 
     '40%' }}>
         {all.map((list) => (
-
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} key={list.id} id="name">
           {list.employee_name}
           <div id="checkProgress">

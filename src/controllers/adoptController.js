@@ -20,8 +20,7 @@ let link = (Math.random() + 1).toString(36).substring(2);
   try {
     const user = req.session?.isAdmin;
     const userId = req.session?.userId
-
-    console.log('======....>>>>>',employee_name);
+    // console.log('======....>>>>>',employee_name);
     if (employee_name !=='' && mentor_name !==''){
       await Form.create({
         employee_name, mentor_name, user_id:userId, link
@@ -65,10 +64,10 @@ const oneAdoptList = async (req, res) => {
     attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
     });
 
-    console.log('usssssser', log)
-    console.log('usssssserdbbbbb', userFromDb.id)
-    console.log('finndddd', findOneUser)
-    console.log('someeeeeeeeeeee', some)
+    // console.log('usssssser', log)
+    // console.log('usssssserdbbbbb', userFromDb.id)
+    // console.log('finndddd', findOneUser)
+    // console.log('someeeeeeeeeeee', some)
     renderTemplate(AdoptOne, { user, findOneUser, some }, res);
     // res.send('heeee')
   } catch(e){
