@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function AdoptAll(props) {
+function AdoptOne(props) {
   const { findOneUser, some, user } = props;
   const isBool = function(arr) {
     return Object.entries(arr).map(([key, value]) => [key, (value)=== true])
@@ -50,4 +50,4 @@ function AdoptAll(props) {
   );
 }
 
-module.exports = AdoptAll;
+module.exports = AdoptOne;

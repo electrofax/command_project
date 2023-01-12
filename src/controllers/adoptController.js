@@ -8,7 +8,7 @@ const Error = require('../views/Error')
 
 
 const renderAdopt=async (req, res) => {
-    const user = req.session?.userName;
+  const user = req.session?.isAdmin;
   renderTemplate(Adopt, { user }, res);
 };
 
@@ -18,7 +18,7 @@ const addEmployee = async (req, res) => {
   } = req.body;
 let link = (Math.random() + 1).toString(36).substring(2);
   try {
-    const user = req.session?.userName;
+    const user = req.session?.isAdmin;
     console.log('======....>>>>>',employee_name);
     if (employee_name !=='' && mentor_name !==''){
       await Form.create({
@@ -37,7 +37,7 @@ let link = (Math.random() + 1).toString(36).substring(2);
 
 const allAdoptList = async (req, res) => {
   try{
-  const user = req.session?.userName;
+    const user = req.session?.isAdmin;
   const all = await Form.findAll({ order: [['id', 'ASC']], raw: true});
 
     const some = await Form.findAll({ order : [['id', 'ASC']],
@@ -54,18 +54,19 @@ const allAdoptList = async (req, res) => {
 
 const oneAdoptList = async (req, res) => {
   try {
-    const user = req.session?.userName;
-    const userFromDb = await User.findOne({ where : { login: user}, raw: true })
+    const log = req.session?.userName;
+    const user = req.session?.isAdmin;
+    const userFromDb = await User.findOne({ where : { login:log }, raw: true })
     const findOneUser = await Form.findAll({ order : [['id', 'ASC']], where : { user_id: userFromDb.id}, raw: true})
 
     const some = await Form.findAll({where : { user_id: userFromDb.id}, order : [['id', 'ASC']],
-     attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
+    attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
     });
 
-    // console.log('usssssser', user)
-    // console.log('usssssserdbbbbb', userFromDb.id)
-    // console.log('finndddd', findOneUser)
-    // console.log('someeeeeeeeeeee', some)
+    console.log('usssssser', log)
+    console.log('usssssserdbbbbb', userFromDb.id)
+    console.log('finndddd', findOneUser)
+    console.log('someeeeeeeeeeee', some)
     renderTemplate(AdoptOne, { user, findOneUser, some }, res);
     // res.send('heeee')
   } catch(e){

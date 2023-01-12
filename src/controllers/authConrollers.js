@@ -18,6 +18,7 @@ const loginUser = async (req, res) => {
       const passCheck = await bcrypt.compare(password, user.password);
       if (passCheck) {
         req.session.userName = user.login;
+        req.session.isAdmin = user.isAdmin
         req.session.save(() => {
           res.redirect('/adopt');
         });

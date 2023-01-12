@@ -2,7 +2,7 @@ const renderTemplate = require('../lib/renderTamplate');
 const Error = require('../views/Error');
 
 const renderError = (req, res) => {
-  renderTemplate(Error, { user } , res);
+  renderTemplate(Error, null , res);
 };
 
 
