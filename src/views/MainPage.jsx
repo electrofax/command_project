@@ -1,9 +1,9 @@
 const React = require("react");
-const Layout = require("./Layout");
+const LayoutHome = require("./LayoutHome");
 
 function MainPage({ user }) {
   return (
-    <Layout user={user}>
+    <LayoutHome user={user}>
       {user ? (
         <div className="content_block">
           <div className="text_main">
@@ -23,7 +23,7 @@ function MainPage({ user }) {
           </div>
         </div>
       )}
-    </Layout>
+    </LayoutHome>
   );
 }
 

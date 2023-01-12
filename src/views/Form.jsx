@@ -1,9 +1,9 @@
 const React = require("react");
-const Layout = require("./Layout");
+const LayoutForm = require("./LayoutForm");
 
 function Forms({ user, fetchForm, one }) {
   return (
-    <Layout user={user} fetchForm={fetchForm}>
+    <LayoutForm user={user} fetchForm={fetchForm}>
       {one ? (
       <div className="formPage">
         <div>
@@ -194,7 +194,7 @@ function Forms({ user, fetchForm, one }) {
       )  : ( 
         <h1>Вас не существует</h1>
       )}
-    </Layout>
+    </LayoutForm>
   );
 }
 

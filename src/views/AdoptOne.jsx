@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-function AdoptAll(props) {
+function AdoptOne(props) {
   const { findOneUser, some, user } = props;
   const isBool = function(arr) {
     return Object.entries(arr).map(([key, value]) => [key, (value)=== true])
@@ -35,8 +35,8 @@ function AdoptAll(props) {
       <div id="some">
         {some.map((el) => (
           <div key={el.id}>
-            {el.id}-
-            {' - '}
+            {/* {el.id}-
+            {' - '} */}
             { ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)} %
           {console.log(isBool(el))} 
             {/* {some.length} */}
@@ -50,4 +50,4 @@ function AdoptAll(props) {
   );
 }
 
-module.exports = AdoptAll;
+module.exports = AdoptOne;

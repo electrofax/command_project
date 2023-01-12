@@ -35,8 +35,8 @@ function AdoptAll(props) {
       <div id="some">
         {some.map((el) => (
           <div key={el.id}>
-            {el.id}-
-            {' - '}
+            {/* {el.id}-
+            {' - '} */}
             { ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)} %
           {console.log(isBool(el))} 
             {/* {some.length} */}
