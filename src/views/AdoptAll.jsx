@@ -9,10 +9,10 @@ function AdoptAll(props) {
   const procent = Object.values(isBool);
   const mapped = procent.filter((el) =>  el === true)
   const sum = mapped.length
-  console.log(some)
-  console.log('-------')
+  // console.log(some)
+  // console.log('-------')
   return (
-    <Layout>
+    <Layout user={user}>
       <h1>Все листки адаптации</h1>
       <div id="adoptContainer">
       <div id="mappedList" style={{'width': 
