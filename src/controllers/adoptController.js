@@ -2,7 +2,7 @@
 const renderTemplate = require('../lib/renderTamplate');
 const Adopt = require('../views/Adopt');
 const AdoptAll = require('../views/AdoptAll');
-const { Form } = require('../../db/models')
+const { Form, User } = require('../../db/models')
 
 
 const renderAdopt=async (req, res) => {
@@ -46,6 +46,16 @@ console.log('ssss', some)
   }
 }
 
+const oneAdoptList = async (req, res) => {
+  const user = req.session.userName;
+  const userFromDb = await User.findOne({ where : { login: user}, raw: true,
+    //  attributes: { include : ['user_id']}
+    })
+  const find = await Form.findAll()
+  console.log('usssssser', user)
+  console.log('usssssserdbbbbb', userFromDb.id)
+  res.send('Hy')
+}
 
 
-module.exports = { renderAdopt, addEmployee, allAdoptList };
+module.exports = { renderAdopt, addEmployee, allAdoptList, oneAdoptList };
