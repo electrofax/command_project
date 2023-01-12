@@ -66,7 +66,7 @@ app.use('/auth', checkLogin, authRouter)
 app.use('/register',checkUser, registerRouter)
 
 // route for page for User and Admin
-app.use('/adopt', adoptRoute);
+app.use('/adopt', checkUser, adoptRoute);
 app.use('/api/form', updateForm);
 
 // routes for user's overview 
