@@ -198,4 +198,4 @@ function Forms({ user, fetchForm, one }) {
   );
 }
 
-module.exports = Forms;
+module.exports = Forms;``
