@@ -7,7 +7,7 @@ const { renderAdopt, addEmployee, allAdoptList } = require('../controllers/adopt
 router
   .get('/', renderAdopt)
   .post('/', addEmployee)
-  .get('/all', allAdoptList);
+  .get('/all', allAdoptList)
 
 module.exports = router;
   
