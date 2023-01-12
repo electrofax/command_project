@@ -5,7 +5,7 @@ const AdoptAll = require('../views/AdoptAll');
 const { Form } = require('../../db/models')
 
 
-const renderAdopt = async (req, res) => {
+const renderAdopt=async (req, res) => {
     const user = req.session?.userName;
   renderTemplate(Adopt, { user }, res);
 };
