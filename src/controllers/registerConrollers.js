@@ -1,5 +1,3 @@
-const ReactDOMServer = require('react-dom/server');
-const React = require('react');
 const bcrypt = require('bcrypt');
 const renderTemplate = require('../lib/renderTamplate');
 const Register = require('../views/Register');

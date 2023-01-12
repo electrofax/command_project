@@ -4,6 +4,7 @@ const Adopt = require('../views/Adopt');
 const AdoptAll = require('../views/AdoptAll');
 const AdoptOne = require('../views/AdoptOne');
 const { Form, User } = require('../../db/models')
+const Error = require('../views/Error')
 
 
 const renderAdopt=async (req, res) => {
@@ -15,21 +16,24 @@ const addEmployee = async (req, res) => {
   const {
     employee_name, mentor_name,
   } = req.body;
-  // console.log('reqBODY=>>', req.body);
-  // if (title && body) {
 let link = (Math.random() + 1).toString(36).substring(2);
-
-
   try {
-    await Form.create({
-      employee_name, mentor_name, user_id: 1, link
-    });
+    const user = req.session?.userName;
+    console.log('======....>>>>>',employee_name);
+    if (employee_name !=='' && mentor_name !==''){
+      await Form.create({
+        employee_name, mentor_name, user_id: 1, link
+      });
+      res.redirect('/adopt/all');
+    }else{
+      renderTemplate(Error, { message: 'Ошибка, Введите Полное Имя Сотрудника и Имя Ментора',user}, res)
+    }
+
     // res.json({ created: true, first: `${title}`, message: `${body}` });
-    res.redirect('/adopt/all');
-  } catch (e) {
-    res.status(400).send(`${e}`);
+    }catch (e) {
+      res.redirect('/')
   }
-};
+}
 
 const allAdoptList = async (req, res) => {
   try{

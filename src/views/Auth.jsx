@@ -1,9 +1,9 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-function Auth () {
+function Auth ( {user}) {
   return (
-    <Layout>
+    <Layout user={user}>
       <link rel="stylesheet" href="/css/index.css" />
 
       <div className="content_block">

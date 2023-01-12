@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 const renderTemplate = require('../lib/renderTamplate');
 const Auth = require('../views/Auth');
 const { User } = require('../../db/models');
+const Error = require('../views/Error')
 
 const renderAuth = (req, res) => {
   renderTemplate(Auth, null, res);
@@ -21,13 +22,15 @@ const loginUser = async (req, res) => {
           res.redirect('/adopt');
         });
       } else {
-        res.redirect('/auth');
+        renderTemplate(Error, { message: 'Пароль Не Верный'}, res)
+        // res.redirect('/auth');
       }
     } else {
-      res.redirect('/register');
+      renderTemplate(Error, { message: 'Такого Пользователя не существует'}, res)
+      // res.redirect('/');
     }
   } catch (error) {
-    res.send(`ERROR---> ${error}`);
+    renderTemplate(Error, { message: 'Ошибка, данные введены не верно'}, res)
   }
 };
 

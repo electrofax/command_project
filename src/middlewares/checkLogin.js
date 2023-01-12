@@ -1,7 +1,7 @@
 // мидла для выхода
 const checkLogin = (req, res, next) => {
   if (req.session.userName) {
-    res.redirect('/admin');
+    res.redirect('/');
   } else {
     next();
   }
