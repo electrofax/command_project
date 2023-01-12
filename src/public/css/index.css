@@ -5,10 +5,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: url("../img/Fon.png")0 0/100% auto no-repeat;
-  width: 1400px;
-  height: 1000px; */
-/* } */
+  background-image: url('../images/office.jpeg');
+background-size:10%;
+  width: 700px;
+  height: 500px;
+} */
+
+.backgroundImg {
+  margin-top: 15vh;
+  width: 500px;
+  height: fit-content;
+  border: 2px solid ghostwhite;
+}
 
 .cont_card{
   margin: 0 auto;

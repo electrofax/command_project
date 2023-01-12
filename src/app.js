@@ -61,7 +61,7 @@ const mainPageRouter = require('./routes/mainPage.routes')
 const registerRouter = require('./routes/register.routes')
 
 app.use('/', mainPageRouter )
-app.use('/form',checkUser, formRoute);
+app.use('/form', formRoute);
 app.use('/auth', checkLogin, authRouter)
 app.use('/register',checkUser, registerRouter)
 

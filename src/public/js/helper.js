@@ -21,6 +21,7 @@ async function fetchDataGet(url = '') {
   return response.json();
 }
 
+//провряем что элемент в который кликнули - инпут, чтобы не обрабатывать клики по другим элементам
 function checkInput (arr) {
     for(let key of arr) {
         if (key.tagName === 'INPUT') {

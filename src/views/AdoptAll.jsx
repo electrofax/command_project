@@ -15,19 +15,29 @@ function AdoptAll(props) {
     <Layout>
       <h1>AdoptList</h1>
       <div id="adoptContainer">
-      <div id="mappedList">
+      <div id="mappedList" style={{'width': 
+    '40%' }}>
         {all.map((list) => (
-          <div key={list.id} id="name">
+
+          <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} key={list.id} id="name">
           {list.employee_name}
-          </div>
+          <div id="checkProgress">
+            <a href={`/form/${list.link}`}>
+          <button type="click">Проверить</button>
+          </a>
+        </div>
+        </div>
         ))}
       </div>
+      {/* <div id="checkProgress">
+        <button type="click">Проверить</button>
+      </div> */}
       <div id="some">
         {some.map((el) => (
           <div key={el.id}>
-            {el.id},
-            {'  '}
-            { ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)}
+            {el.id}-
+            {' - '}
+            { ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)} %
           {console.log(isBool(el))} 
             {/* {some.length} */}
           </div>
