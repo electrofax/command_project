@@ -2,7 +2,7 @@ const React = require('react');
 const Layout = require('./Layout');
 
 function AdoptAll(props) {
-  const { all, some } = props;
+  const { all, some, user } = props;
   const isBool = function(arr) {
     return Object.entries(arr).map(([key, value]) => [key, (value)=== true])
   };
@@ -42,7 +42,7 @@ function AdoptAll(props) {
             {/* {some.length} */}
           </div>
         ))}
-     </div>
+      </div>
 
       </div>
       {/* <link defer rel="stylesheet" href="/css/index.css" /> */}

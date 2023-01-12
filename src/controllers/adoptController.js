@@ -33,15 +33,16 @@ let link = (Math.random() + 1).toString(36).substring(2);
 
 const allAdoptList = async (req, res) => {
   try{
+  const user = req.session?.userName;
   const all = await Form.findAll({ order: [['id', 'ASC']], raw: true});
 
     const some = await Form.findAll({ order : [['id', 'ASC']],
-     attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
+      attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
     });
 
 
 console.log('ssss', some)  
-    renderTemplate(AdoptAll, { all, some }, res);
+    renderTemplate(AdoptAll, { all, some, user }, res);
   } catch(e) {
     res.status(400).send(`${e}`);
   }

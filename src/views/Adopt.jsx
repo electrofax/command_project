@@ -5,9 +5,7 @@ module.exports = function Adopt({ user }) {
   return (
     <Layout user={user}>
       <div className="content_block">
-        <div className='content_center'>``
-
-
+        <div className='content_center'>
           <h1>Добрый день, {user}</h1>
           <h2>Вы можете добавить нового сотрудника</h2>
           <div id="container_adopt">

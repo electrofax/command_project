@@ -25,17 +25,26 @@ function Layout ( { children, user, fetchForm } ) {
               <li className="logo">
               <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
+                </li> */}
                 <li className="nav-item pull-right">
-                  <a className="nav-link active " aria-current="page" >{user}</a>
+                  <a className="nav-link active " aria-current="page">Приветствую,{user}</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/logout">Logout</a>
+                  <a className="nav-link active" aria-current="page" href="/logout">Выход</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/test">Test</a>
+                  <a className="nav-link active" aria-current="page" href="/adopt"><button type="submit" className="button_nav out_btn">Создать Лист Адаптации</button></a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/adopt/all"><button type="submit" className="button_nav">Все Листы Адаптации</button></a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/adopt/one"><button type="submit" className="button_nav">Мои Листы Адаптации</button></a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/overvew"><button type="submit" className="button_nav">Все Пользователи</button></a>
                 </li>
               </ul>
             </div>
