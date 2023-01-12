@@ -1,4 +1,4 @@
-const getEl = (loc) => document.querySelector(loc);
+const el = (loc) => document.querySelector(loc);
 
 async function fetchData(url = '', data = {}, method) {
   const response = await fetch(url, {
@@ -11,9 +11,9 @@ async function fetchData(url = '', data = {}, method) {
     },
     redirect: 'follow',
     referrerPolicy: 'no-referrer',
-    body: JSON.stringify(data), // body data type must match "Content-Type" header
+    body: JSON.stringify(data),
   });
-  return response.json(); // parses JSON response into native JavaScript objects
+  return response.json();
 }
 
 async function fetchDataGet(url = '') {
@@ -21,4 +21,4 @@ async function fetchDataGet(url = '') {
   return response.json();
 }
 
-export { fetchData, fetchDataGet, getEl };
+export { fetchData, fetchDataGet, el};

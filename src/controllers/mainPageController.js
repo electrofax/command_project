@@ -5,8 +5,9 @@ const MainPage = require('../views/MainPage');
 
 
 const rendermainPage = async (req, res) => {
-    const user = req.session?.userName;
-  renderTemplate(MainPage, { user }, res);
+    const user = req.session?.isAdmin;
+    // const admin = req.session?.isAdmin;
+  renderTemplate(MainPage, { user}, res);
 };
 
 

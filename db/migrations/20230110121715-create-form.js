@@ -10,9 +10,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       employee_name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       mentor_name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       user_id: {
@@ -59,6 +61,12 @@ module.exports = {
       },
       link: {
         type: Sequelize.STRING
+      },
+      first_task: {
+        type: Sequelize.BOOLEAN
+      },
+      email_sign: {
+        type: Sequelize.BOOLEAN
       },
       createdAt: {
         allowNull: false,

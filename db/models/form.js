@@ -15,9 +15,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Form.init({
     employee_name: {
+      allowNull: false,
       type: DataTypes.STRING
     },
     mentor_name: {
+      allowNull: false,
       type: DataTypes.STRING
     },
     user_id: {
@@ -58,6 +60,12 @@ module.exports = (sequelize, DataTypes) => {
     },
     link: {
       type: DataTypes.STRING
+    },
+    first_task: {
+      type: DataTypes.BOOLEAN
+    },
+    email_sign: {
+      type: DataTypes.BOOLEAN
     },
   }, {
     sequelize,
