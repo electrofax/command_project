@@ -5,7 +5,7 @@ const AdoptAll = require('../views/AdoptAll');
 const { Form } = require('../../db/models')
 
 
-const renderAdopt = async (req, res) => {
+const renderAdopt=async (req, res) => {
     const user = req.session?.userName;
   renderTemplate(Adopt, { user }, res);
 };
@@ -17,6 +17,7 @@ const addEmployee = async (req, res) => {
   console.log('reqBODY=>>', req.body);
   // if (title && body) {
 let link = (Math.random() + 1).toString(36).substring(2);
+
 
   try {
     await Form.create({
