@@ -25,8 +25,6 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(morgan('dev'));
-// const path = require('path')
-app.use(express.static(('public')))
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -59,15 +57,19 @@ const getForm = require('./routes/api/form.routes');
 const authRouter = require('./routes/auth.routes');
 const mainPageRouter = require('./routes/mainPage.routes')
 const registerRouter = require('./routes/register.routes')
+const overviewRouter = require('./routes/overview.routes')
 
 app.use('/', mainPageRouter )
-app.use('/form',checkUser, formRoute);
+app.use('/form', formRoute);
 app.use('/auth', checkLogin, authRouter)
 app.use('/register',checkUser, registerRouter)
 
 // route for page for User and Admin
 app.use('/adopt', adoptRoute);
 app.use('/api/form', updateForm);
+
+// routes for user's overview 
+app.use('/overview', overviewRouter)
 
 //api routes
 app.use('/api/form', updateForm);

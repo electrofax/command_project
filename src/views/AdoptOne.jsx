@@ -2,7 +2,7 @@ const React = require('react');
 const Layout = require('./Layout');
 
 function AdoptAll(props) {
-  const { all, some } = props;
+  const { findOneUser, some } = props;
   const isBool = function(arr) {
     return Object.entries(arr).map(([key, value]) => [key, (value)=== true])
   };
@@ -13,11 +13,11 @@ function AdoptAll(props) {
   console.log('-------')
   return (
     <Layout>
-      <h1>Все листки адаптации</h1>
+      <h1>Мои листки адаптации</h1>
       <div id="adoptContainer">
       <div id="mappedList" style={{'width': 
     '40%' }}>
-        {all.map((list) => (
+        {findOneUser.map((list) => (
 
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} key={list.id} id="name">
           {list.employee_name}

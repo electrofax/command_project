@@ -8,7 +8,7 @@ const { renderOneForm } = require('../controllers/formController')
 
 router
 .get("/", renderForm)
-.get('/:id', renderOneForm);
+.get('/:link', renderOneForm);
 
 module.exports = router;
   
