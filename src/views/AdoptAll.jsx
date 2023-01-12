@@ -2,7 +2,7 @@ const React = require('react');
 const Layout = require('./Layout');
 
 function AdoptAll(props) {
-  const { all, some } = props;
+  const { all, some, user } = props;
   const isBool = function(arr) {
     return Object.entries(arr).map(([key, value]) => [key, (value)=== true])
   };
@@ -12,7 +12,7 @@ function AdoptAll(props) {
   console.log(some)
   console.log('-------')
   return (
-    <Layout>
+    <Layout user={user}>
       <h1>AdoptList</h1>
       <div id="adoptContainer">
       <div id="mappedList" style={{'width': 
