@@ -210,3 +210,7 @@ button::before {
 .out_btn{
   margin-left: 150px;
 }
+
+.reg_form{
+  max-width: 500px;
+}
