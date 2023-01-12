@@ -23,7 +23,7 @@ function Layout ( { children, user, fetchForm } ) {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="logo">
-              <img src="./img/logo.png" className="img-fluid" alt="..."></img>
+              <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>
@@ -52,7 +52,7 @@ function Layout ( { children, user, fetchForm } ) {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="logo">
-              <img src="./img/logo.png" className="img-fluid" alt="..."></img>
+              <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>

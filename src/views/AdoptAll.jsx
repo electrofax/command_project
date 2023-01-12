@@ -42,10 +42,10 @@ function AdoptAll(props) {
             {/* {some.length} */}
           </div>
         ))}
-     </div>
+      </div>
 
       </div>
-      <link defer rel="stylesheet" href="/css/index.css" />
+      {/* <link defer rel="stylesheet" href="/css/index.css" /> */}
     </Layout>
   );
 };
