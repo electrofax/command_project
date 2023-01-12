@@ -33,7 +33,6 @@ background-size:10%;
   font-style: normal;
   font-weight: 700;
   background: url("../img/Fon.png") 0 0/100% auto no-repeat;
-  /* position: relative; */
   width: 100%;
   height: 1200px;
 
@@ -154,4 +153,10 @@ button::before {
   display:flex;
   flex-direction:column;
   justify-content:center;
+}
+
+#adoptContainer {
+  display:flex ;
+  flex-direction: row;
+  justify-content:space-around;
 }

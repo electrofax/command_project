@@ -5,7 +5,7 @@ function Forms({ user, fetchForm, one }) {
   return (
     <Layout user={user} fetchForm={fetchForm}>
       {one ? (
-      <div classNameName="formPage">
+      <div className="formPage">
         <div>
           <p>
             Привет, <b>{one.employee_name}</b>! И добро пожаловать в команду Высокогорья!
