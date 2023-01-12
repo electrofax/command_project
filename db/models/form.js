@@ -15,9 +15,11 @@ module.exports = (sequelize, DataTypes) => {
   }
   Form.init({
     employee_name: {
+      allowNull: false,
       type: DataTypes.STRING
     },
     mentor_name: {
+      allowNull: false,
       type: DataTypes.STRING
     },
     user_id: {

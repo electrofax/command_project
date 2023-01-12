@@ -1,9 +1,9 @@
 const React = require("react");
 const Layout = require("./Layout");
 
-function MainPage({ user }) {
+function MainPage({ user, admin }) {
   return (
-    <Layout user={user}>
+    <Layout user={user} admin={admin}>
       {user ? (
         <div className="content_block">
           <div className="text_main">

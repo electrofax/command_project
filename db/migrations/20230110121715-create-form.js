@@ -10,9 +10,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       employee_name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       mentor_name: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       user_id: {
