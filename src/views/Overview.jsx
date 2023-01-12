@@ -39,10 +39,10 @@ function Overview(props) {
             key={hr.id}
           >
             <div className="card-header">
-              {hr.name}
+              Имя: {hr.name}
               
               {' '}
-              {hr.email}
+              Почта: {hr.email}
             </div>
             {/* <div className="card-body">
               <h5 className="card-title">{hr.id}</h5>
