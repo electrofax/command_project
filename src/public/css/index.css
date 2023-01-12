@@ -202,8 +202,8 @@ button::before {
 .slidinggroove:after{
   position: absolute;
   content: "";
-  width: 14px;
-  height: 14px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: #fff;
   top: 1px;
