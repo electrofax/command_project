@@ -10,12 +10,6 @@ module.exports = function Adopt({ user }) {
           <h2>Вы можете добавить нового сотрудника</h2>
           <div id="container_adopt">
               <form id="form" action="/adopt" method="POST">
-                {/* <div id="inputs">
-              <input name="employee_name" placeholder="полное имя нового сотрудника" type="text" />
-              <input name="mentor_name" placeholder="имя ментора" type="text" />
-              <button id="btn" type="submit">Добавить</button>
-            </div> */}
-
                 <div className="mb-3">
                   <input name="employee_name" placeholder="полное имя нового сотрудника" type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
                 </div>

@@ -7,7 +7,8 @@ const { User } = require('../../db/models');
 // cоздаем функцию регистрации (по сути рендер страницы)
 const renderRegister = (req, res) => {
   // console.log('req.session===>', req.session);
-  renderTemplate(Register, null, res);
+  const user = req.session?.userName;
+  renderTemplate(Register, { user }, res);
 };
 
 // функция обрабочтик формы
