@@ -1,7 +1,6 @@
 const React = require('react');
 
 function Layout ( { children, user, fetchForm } ) {
-  console.log(fetchForm)
   return (
     <html lang="en">
       <head>
@@ -16,7 +15,7 @@ function Layout ( { children, user, fetchForm } ) {
         <title>Document</title>
       </head>
       {user ? (
-        <><nav className="navbar navbar-expand-lg bg-light">
+        <><nav className="navbar navbar-expand-lg nav-color">
           <div className="container-fluid">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
@@ -24,19 +23,28 @@ function Layout ( { children, user, fetchForm } ) {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="logo">
-              <img src="./img/logo.png" className="img-fluid" alt="..."></img>
+              <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
+                </li> */}
                 <li className="nav-item pull-right">
-                  <a className="nav-link active " aria-current="page" >{user}</a>
+                  <a className="nav-link active " aria-current="page">Приветствую,{user}</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/logout">Logout</a>
+                  <a className="nav-link active" aria-current="page" href="/logout">Выход</a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/test">Test</a>
+                  <a className="nav-link active" aria-current="page" href="/adopt"><button type="submit" className="button_nav out_btn">Создать Лист Адаптации</button></a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/adopt/all"><button type="submit" className="button_nav">Все Листы Адаптации</button></a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/adopt/one"><button type="submit" className="button_nav">Мои Листы Адаптации</button></a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/overview"><button type="submit" className="button_nav">Все Пользователи</button></a>
                 </li>
               </ul>
             </div>
@@ -45,7 +53,7 @@ function Layout ( { children, user, fetchForm } ) {
             {children}
           </body></>
       ) : (
-        <><nav className="navbar navbar-expand-lg bg-light">
+        <><nav className="navbar navbar-expand-lg nav-color">
           <div className="container-fluid">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon" />
@@ -53,7 +61,7 @@ function Layout ( { children, user, fetchForm } ) {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="logo">
-              <img src="./img/logo.png" className="img-fluid" alt="..."></img>
+              <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>
