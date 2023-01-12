@@ -2,6 +2,7 @@
 const renderTemplate = require('../lib/renderTamplate');
 const Adopt = require('../views/Adopt');
 const AdoptAll = require('../views/AdoptAll');
+const AdoptOne = require('../views/AdoptOne');
 const { Form, User } = require('../../db/models')
 
 
@@ -47,14 +48,24 @@ console.log('ssss', some)
 }
 
 const oneAdoptList = async (req, res) => {
-  const user = req.session.userName;
-  const userFromDb = await User.findOne({ where : { login: user}, raw: true,
-    //  attributes: { include : ['user_id']}
-    })
-  const find = await Form.findAll()
-  console.log('usssssser', user)
-  console.log('usssssserdbbbbb', userFromDb.id)
-  res.send('Hy')
+  try {
+    const user = req.session.userName;
+    const userFromDb = await User.findOne({ where : { login: user}, raw: true })
+    const findOneUser = await Form.findAll({ order : [['id', 'ASC']], where : { user_id: userFromDb.id}, raw: true})
+
+    const some = await Form.findAll({where : { user_id: userFromDb.id}, order : [['id', 'ASC']],
+     attributes: { exclude : ['user_id', 'employee_name', 'mentor_name', 'createdAt', 'updatedAt', 'three_names']}, raw: true
+    });
+
+    console.log('usssssser', user)
+    console.log('usssssserdbbbbb', userFromDb.id)
+    console.log('finndddd', findOneUser)
+    console.log('someeeeeeeeeeee', some)
+    renderTemplate(AdoptOne, { findOneUser, some }, res);
+    // res.send('heeee')
+  } catch(e){
+    res.status(400).send(`${e}`);
+  }
 }
 
 

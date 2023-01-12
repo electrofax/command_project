@@ -57,6 +57,7 @@ const getForm = require('./routes/api/form.routes');
 const authRouter = require('./routes/auth.routes');
 const mainPageRouter = require('./routes/mainPage.routes')
 const registerRouter = require('./routes/register.routes')
+const overviewRouter = require('./routes/overview.routes')
 
 app.use('/', mainPageRouter )
 app.use('/form', formRoute);
@@ -66,6 +67,9 @@ app.use('/register',checkUser, registerRouter)
 // route for page for User and Admin
 app.use('/adopt', adoptRoute);
 app.use('/api/form', updateForm);
+
+// routes for user's overview 
+app.use('/overview', overviewRouter)
 
 //api routes
 app.use('/api/form', updateForm);
