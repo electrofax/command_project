@@ -44,7 +44,7 @@ function Layout ( { children, user, fetchForm } ) {
                   <a className="nav-link active" aria-current="page" href="/adopt/one"><button type="submit" className="button_nav">Мои Листы Адаптации</button></a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/overvew"><button type="submit" className="button_nav">Все Пользователи</button></a>
+                  <a className="nav-link active" aria-current="page" href="/overview"><button type="submit" className="button_nav">Все Пользователи</button></a>
                 </li>
               </ul>
             </div>
