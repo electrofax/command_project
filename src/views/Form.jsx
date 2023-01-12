@@ -114,7 +114,7 @@ function Forms({ user, fetchForm, one }) {
                       <div className="mylabel">
                         <input name="three_names_check" type="checkbox" id="coding" />
                         <div className="slidinggroove"></div>
-                      </div>``
+                      </div>
                       <p className="strCheckForm">
                         &nbsp;Напиши имена трех твоих коллег по отделу:
                         <input
@@ -198,4 +198,4 @@ function Forms({ user, fetchForm, one }) {
   );
 }
 
-module.exports = Forms;``
+module.exports = Forms;
