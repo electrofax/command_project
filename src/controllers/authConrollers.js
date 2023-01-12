@@ -19,6 +19,7 @@ const loginUser = async (req, res) => {
       if (passCheck) {
         req.session.userName = user.login;
         req.session.isAdmin = user.isAdmin
+        req.session.userId = user.id
         req.session.save(() => {
           res.redirect('/adopt');
         });

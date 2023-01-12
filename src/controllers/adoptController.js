@@ -19,10 +19,12 @@ const addEmployee = async (req, res) => {
 let link = (Math.random() + 1).toString(36).substring(2);
   try {
     const user = req.session?.isAdmin;
+    const userId = req.session?.userId
+
     console.log('======....>>>>>',employee_name);
     if (employee_name !=='' && mentor_name !==''){
       await Form.create({
-        employee_name, mentor_name, user_id: 1, link
+        employee_name, mentor_name, user_id:userId, link
       });
       res.redirect('/adopt/all');
     }else{
