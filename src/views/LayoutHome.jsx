@@ -8,42 +8,62 @@ function LayoutHome(props) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <script type='module' src='/js/application.js' />
+        <script type="module" src="/js/application.js" />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossOrigin="anonymous"
         />
-        <link rel='stylesheet' href='/css/reset.css' />
-        <link rel='stylesheet' href='/css/index.css' />
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/csыs/index.css" />
+        <link rel="stylesheet" href="/css/hroni.css" />
         <title>Main</title>
       </head>
       <body>
-      <nav className="navbar navbar-expand-lg nav-color">
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon" />
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="logo">
-              <img src="/img/logo.png" className="img-fluid" alt="..."></img>
-                </li>
-                {/* <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">Home</a>
-                </li> */}
+            <a className="navbar-brand" href="#">
+              <img className="logo_img" src="/img/logo.png" alt="Логотип" />
+            </a>
+            {/* <button
+              className="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarColor03"
+              aria-controls="navbarColor03"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              wfd-invisible="true"
+            >
+              <span className="navbar-toggler-icon"></span>
+            </button> */}
+            <div className="collapse navbar-collapse" id="navbarColor03">
+              <form className="d-flex"></form>
+              <div>ООО "Высокая гора"</div>
+              {/* <ul className="navbar-nav me-auto">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href='#'>
-                    ООО "Высокая гора"
-                    </a>
+                  <a className="nav-link active" href="#">
+                    Создать Лист Адаптации
+                    <span className="visually-hidden">(current)</span>
+                  </a>
                 </li>
-                {/* <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href='/adopt'>
-                    Создать пользователя
-                    </a>
-                </li> */}
-              </ul>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    Все Листы Адаптации
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    Мои Листы Адаптации
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="#">
+                    Все Пользователи
+                  </a>
+                </li>
+              </ul> */}
             </div>
           </div>
         </nav>

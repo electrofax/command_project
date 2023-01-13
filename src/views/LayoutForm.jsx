@@ -15,20 +15,21 @@ function LayoutForm(props) {
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossOrigin="anonymous"
         />
-        <link rel='stylesheet' href='/css/reset.css' />
-        <link rel='stylesheet' href='/css/index.css' />
-        <script type='module' src='/js/application.js' />
-        {fetchForm && <script type='module' src='/js/helper.js' />}
-        {fetchForm && <script type='module' src='/js/fetchForm.js' />}
+        <link rel="stylesheet" href="/css/reset.css" />
+        <link rel="stylesheet" href="/csss/index.css" />
+        <link rel="stylesheet" href="/css/hroni.css" />
+        <script type="module" src="/js/application.js" />
+        {fetchForm && <script type="module" src="/js/helper.js" />}
+        {fetchForm && <script type="module" src="/js/fetchForm.js" />}
         <title>Form</title>
       </head>
 
       {user ? (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container-fluid">
-            <a className="navbar-brand" href="#">
+            <h4 className="navbar-brand" href="#">
               <img className="logo_img" src="/img/logo.png" alt="Логотип" />
-            </a>
+            </h4>
             <button
               className="navbar-toggler"
               type="button"
@@ -42,29 +43,32 @@ function LayoutForm(props) {
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse" id="navbarColor03">
-              <form className="d-flex">
-
-              </form>
+              <form className="d-flex"></form>
               <ul className="navbar-nav me-auto">
                 <li className="nav-item">
-                  <a className="nav-link active" href="#">
+                  <a className="nav-link active" href="/adopt">
                     Создать Лист Адаптации
                     <span className="visually-hidden">(current)</span>
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/adopt/all">
                     Все Листы Адаптации
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/adopt/one">
                     Мои Листы Адаптации
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a className="nav-link" href="/overview">
                     Все Пользователи
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/logout">
+                    Выход
                   </a>
                 </li>
               </ul>
@@ -82,7 +86,6 @@ function LayoutForm(props) {
           integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
           crossOrigin="anonymous"
         />
-        
       </body>
     </html>
   );
