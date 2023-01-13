@@ -10,6 +10,7 @@ function Layout({ children, user, fetchForm }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel='stylesheet' href='/css/reset.css' />
         <link rel='stylesheet' href='/css/index.css' />
+        <script type='module' src='/js/application.js' />
         {fetchForm && <script type='module' src='/js/helper.js' />}
         {fetchForm && <script type='module' src='/js/fetchForm.js' />}
         <title>Document</title>

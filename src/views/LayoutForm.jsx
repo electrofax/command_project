@@ -17,6 +17,7 @@ function LayoutForm(props) {
         />
         <link rel='stylesheet' href='/css/reset.css' />
         <link rel='stylesheet' href='/css/index.css' />
+        <script type='module' src='/js/application.js' />
         {fetchForm && <script type='module' src='/js/helper.js' />}
         {fetchForm && <script type='module' src='/js/fetchForm.js' />}
         <title>Form</title>
@@ -33,9 +34,9 @@ function LayoutForm(props) {
               <li className="logo">
               <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
+                {/* <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/">Ho</a>
+                </li> */}
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href='/adopt/all'>
                     Вернуться

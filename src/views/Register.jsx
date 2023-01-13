@@ -12,7 +12,7 @@ function Register({ user }) {
               <form action="/register" method="post" className="registerForm" id="form">
                 <div className="mb-3">
                   <label htmlFor="exampleInputEmail1" className="form-label">
-                    Login
+                    Логин
                   </label>
                   <input
                     name="login"
@@ -21,7 +21,7 @@ function Register({ user }) {
                   />
                 </div>
                 <div className="mb-3">
-                  <label htmlFor="exampleInputEmail1">Email address</label>
+                  <label htmlFor="exampleInputEmail1">Email адрес</label>
                   <input
                     type="email"
                     name="email"
@@ -33,7 +33,7 @@ function Register({ user }) {
                 </div>
                 <div className="mb-3">
                   <label htmlFor="exampleInputPassword1" className="form-label">
-                    Password
+                    Пароль
                   </label>
                   <input
                     name="password"
@@ -54,10 +54,10 @@ function Register({ user }) {
                 </div>
 
                 <div className="mb-3 form-check">
-                  <input type="radio" name="isAdmin" value="true" />Admin
+                  <input type="radio" name="isAdmin" value="true" />Администратор
                 </div>
                 <div className="mb-3 form-check">
-                  <input type="radio" onChange name="isAdmin" value="false" checked />User
+                  <input type="radio" onChange name="isAdmin" value="false" checked />Пользователь
                 </div>
                 <button type="submit" className="button">
                   Зарегистрировать
