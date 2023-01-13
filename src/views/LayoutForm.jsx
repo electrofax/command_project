@@ -33,9 +33,9 @@ function LayoutForm(props) {
               <li className="logo">
               <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
+                {/* <li className="nav-item">
+                  <a className="nav-link active" aria-current="page" href="/">Ho</a>
+                </li> */}
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href='/adopt/all'>
                     Вернуться

@@ -70,7 +70,7 @@ app.use('/adopt', checkUser, adoptRoute);
 app.use('/api/form', updateForm);
 
 // routes for user's overview 
-app.use('/overview', overviewRouter)
+app.use('/overview',checkUser, overviewRouter)
 
 // route for reset password
 app.use('/reset', resetPswdRouter)
