@@ -1,0 +1,71 @@
+body {
+  color:black;
+}
+
+input, select, textarea{
+  color: #000;
+}
+
+#list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 5px ;
+}
+#sel {
+  font-size: 24px;
+  border: 3px solid black;
+  border-radius: 5px;
+  padding: 6px 10px;
+} 
+h1 {
+  margin: 2px
+} */
+
+#form {
+  /* width: 500px;
+  height: 300px; */
+  margin: 2px;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  /* margin: 100px ; */
+}
+input {
+  margin: 1px;   
+}
+
+#input {
+  display: flex;
+  flex-direction: column;
+  border: 1px; 
+  margin: 15px;
+   text-align: center;
+  color: black !important;
+  
+}
+
+#half {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
+  flex-direction: row; 
+  /* border: 2px solid yellow; */
+   width: 100%;
+}
+
+#forTxt{
+  margin: 40px; 
+  align-items: center;
+  
+}
+
+button {
+  margin: 10px;
+  border: 2px solid black;
+}
