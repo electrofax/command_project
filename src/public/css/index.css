@@ -202,8 +202,8 @@ button::before {
 .slidinggroove:after{
   position: absolute;
   content: "";
-  width: 15px;
-  height: 15px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   background: #fff;
   top: 1px;
@@ -233,7 +233,7 @@ transform: translateX(16px);
     display: block;
     width: 32px;
     height: 16px;
-    margin-bottom: 15px;
+    padding-right: 32px;
     cursor: pointer;
 }
 
@@ -265,7 +265,7 @@ button::before {
   font-size: 20px;
 }
 .formPage{
-  width: 75%;
+  /* width: 75%; */
   margin: 0 auto;
 }
 .three_names_input{
