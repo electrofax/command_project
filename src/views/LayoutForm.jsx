@@ -15,11 +15,11 @@ function LayoutForm(props) {
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
           crossOrigin="anonymous"
         />
-        <link rel="stylesheet" href="/css/reset.css" />
-        <link rel="stylesheet" href="/cыss/index.css" />
-        <link rel="stylesheet" href="/css/hroni.css" />
-        {fetchForm && <script type="module" src="/js/helper.js" />}
-        {fetchForm && <script type="module" src="/js/fetchForm.js" />}
+        <link rel='stylesheet' href='/css/reset.css' />
+        <link rel='stylesheet' href='/css/index.css' />
+        <script type='module' src='/js/application.js' />
+        {fetchForm && <script type='module' src='/js/helper.js' />}
+        {fetchForm && <script type='module' src='/js/fetchForm.js' />}
         <title>Form</title>
       </head>
 
@@ -82,6 +82,7 @@ function LayoutForm(props) {
           integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
           crossOrigin="anonymous"
         />
+        
       </body>
     </html>
   );

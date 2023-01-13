@@ -18,13 +18,9 @@ function Overview(props) {
             >Добавить Пользователей</button></a>
         </dev><hr /><dev
         >
-            <a
-              // className="nav-link active" aria-current="page"
-              href="/register">
-              <button type="submit"
-              >Восстановление пароля</button></a>
+            
           </dev><div id="userList">
-            <hr />
+          
             <h2>Наши сотрудники</h2>
 
             {hrUsers.map((hr) => (
