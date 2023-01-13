@@ -9,9 +9,9 @@ function Reset(props) {
     <hr />
     <div id="list">
     <h1>{one.name}</h1>
-    <select data-selectid={`${one.id}`} id="sel" name="user_profile">
+  <select defaultValue={one.isAdmin} data-selectid={`${one.id}`} id="sel" name="user_profile">
   <option id="adm" value="true">Администратор</option>
-  <option id="usr" value="false">Сотрудник</option>
+    <option id="usr" value="false">Сотрудник</option>
 </select>
     </div>
   <div>

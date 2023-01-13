@@ -58,4 +58,7 @@ btn.addEventListener('click', async (e) => {
       }),
     });
     const data = await response.json();
+    if(data.destroySession){
+      window.location = '/';
+    }
   })
