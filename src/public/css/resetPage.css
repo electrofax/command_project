@@ -12,6 +12,7 @@ input, select, textarea{
   justify-content: space-between;
   margin: 20px;
   padding: 5px ;
+  border: 2px solid black;
 }
 #sel {
   font-size: 24px;

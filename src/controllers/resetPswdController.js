@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 const renderTemplate = require('../lib/renderTamplate');
 const Reset = require('../views/Reset');
 const { User } = require('../../db/models')
+const killer = require('../middlewares/sessionKiller');
 
 
 
@@ -35,12 +36,31 @@ const updatePassword = async (req, res) => {
   // renderTemplate(Error, { message: 'Ошибка, данные введены не верно'}, res)
 }
   } else {
+    console.log('beforeIFFFFFFF', req.session.userId, id)
+    if(req.session.userId == id) {
+      try{
+        console.log('SSSSSESSION', req.session)
+        
+      console.log('req.bodyKILLER', req.body, isAdmin);
+      await User.update({ isAdmin: isAdmin}, { where: { id: id } });
+      console.log('beforeKiller')
+      req.session.destroy(() => {
+        res.clearCookie('ProgectCookie');
+        res.json({destroySession: true});
+      });
+      } catch(e) {
+        res.send('Not done for admin change')
+      }
+  } else {
     try{
-    console.log('req.bodySECCCOND', req.body, isAdmin);
+      console.log('SSSSSESSION', req.session)
+      
+    console.log('req.bodyNOTKILLER', req.body, isAdmin);
     await User.update({ isAdmin: isAdmin}, { where: { id: id } });
     } catch(e) {
       res.send('Not done for admin change')
     }
+  }
   }
 }
 
