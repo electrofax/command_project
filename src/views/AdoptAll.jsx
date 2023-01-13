@@ -15,6 +15,7 @@ function AdoptAll(props) {
   // console.log('-------')
   return (
     <Layout user={user}>
+        <link rel='stylesheet' href='/css/progressbar.css' />
       <h1>Все листки адаптации</h1>
       <div id="adoptContainer">
       <div id="mappedList" style={{'width': 
@@ -26,23 +27,19 @@ function AdoptAll(props) {
           <div id="checkProgress">
             <a href={`/form/${list.link}`}>
           Проверить</a>
-          <img data-link={`/form/${list.link}`} id='copyyLink' className='copyIcon' src='/img/copy.png' alt='скопировать ссылку' ></img> 
+          <img data-link={`/form/${list.link}`} id='copyyLink' className='copyIcon' src='/img/copy.png' alt='скопировать ссылку' ></img>
         </div>
         </div>
         ))}
       </div>
-      {/* <div id="checkProgress">
-        <button type="click">Проверить</button>
-      </div> */}
+      
+
       <div id="some">
         {some.map((el) => (
-          <div key={el.id}>
-            {/* {el.id}-
-            {' - '} */}
-            { ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)} %
-          {console.log(isBool(el))} 
-            {/* {some.length} */}
+          <div key={el.id} className='interestAntPorogressBar'>
+            <div className='progressBar progressBarGray'></div> <div className='interests'>{ ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)} %  </div>
           </div>
+          
         ))}
       </div>
 
