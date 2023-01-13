@@ -1,7 +1,7 @@
 // мидла для выхода
 const checkLogin = (req, res, next) => {
   if (req.session.userName) {
-    res.redirect('/');
+    res.redirect('/adopt');
   } else {
     next();
   }

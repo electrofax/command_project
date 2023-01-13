@@ -6,6 +6,6 @@ const { renderReset, updatePassword } = require('../controllers/resetPswdControl
 
 router
   .get('/:id', renderReset)
-  .put('/id', updatePassword);
+  .patch('/:id', updatePassword)
 
 module.exports = router;

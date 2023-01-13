@@ -9,19 +9,19 @@ function Reset(props) {
     <hr />
     <div id="list">
     <h1>{one.name}</h1>
-    <select id="sel" name="user_profile_color_1">
-  <option value="1">Администратор</option>
-  <option value="2">Сотрудник</option>
+    <select data-selectid={`${one.id}`} id="sel" name="user_profile">
+  <option id="adm" value="true">Администратор</option>
+  <option id="usr" value="false">Сотрудник</option>
 </select>
     </div>
   <div>
     <div id="form">
-      {/* <form id="upd" > */}
+      
       <div id="half">
       <div id="forTxt">
-          <h4>Здесь можно
+          <h4 id="partOne">Здесь можно
             </h4>
-            <h4>
+            <h4 id="partTwo">
              поменять пароль</h4>
         </div>
         <div id="input">
@@ -35,8 +35,8 @@ function Reset(props) {
           <input id="sec" name="verify" type="text" placeholder="пароль" />
           <button className="btn"  data-userId={`${one.id}`} type="button">Поменять</button>
         </div>
+        <div id="insert" />
       </div>
-      {/* </form> */}
     </div>
   </div>
   <link rel='stylesheet' href='/css/resetPage.css' />

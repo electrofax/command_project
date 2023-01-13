@@ -21,4 +21,9 @@ async function fetchDataGet(url = '') {
   return response.json();
 }
 
-export { fetchData, fetchDataGet, el};
+function copyURI(evt) {
+    evt.preventDefault();
+    navigator.clipboard.writeText(window.location.origin + evt.target.getAttribute('data-link'))
+}
+
+export { fetchData, fetchDataGet, el, copyURI};

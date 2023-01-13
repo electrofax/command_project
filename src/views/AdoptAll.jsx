@@ -1,5 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
+import { copyURI } from '../public/js/helper';
+
 
 function AdoptAll(props) {
   const { all, some, user } = props;
@@ -23,8 +25,8 @@ function AdoptAll(props) {
           {list.employee_name}
           <div id="checkProgress">
             <a href={`/form/${list.link}`}>
-          <button type="click">Проверить</button>
-          </a>
+          Проверить</a>
+          <img data-link={`/form/${list.link}`} id='copyyLink' className='copyIcon' src='/img/copy.png' alt='скопировать ссылку' ></img> 
         </div>
         </div>
         ))}

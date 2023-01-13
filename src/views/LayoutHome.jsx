@@ -8,7 +8,7 @@ function LayoutHome(props) {
         <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
+        <script type='module' src='/js/application.js' />
         <link
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
           rel="stylesheet"
@@ -30,19 +30,19 @@ function LayoutHome(props) {
               <li className="logo">
               <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href='#'>
-                    ООО Высокая гора
+                    ООО "Высокая гора"
                     </a>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href='/adopt'>
                     Создать пользователя
                     </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
