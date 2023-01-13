@@ -292,3 +292,10 @@ body{
   display: flex;
   align-items: center;
 }
+
+.copyIcon {
+  padding-left: 10px;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}

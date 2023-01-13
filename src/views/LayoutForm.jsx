@@ -17,6 +17,7 @@ function LayoutForm(props) {
         />
         <link rel='stylesheet' href='/css/reset.css' />
         <link rel='stylesheet' href='/css/index.css' />
+        <script type='module' src='/js/application.js' />
         {fetchForm && <script type='module' src='/js/helper.js' />}
         {fetchForm && <script type='module' src='/js/fetchForm.js' />}
         <title>Form</title>
