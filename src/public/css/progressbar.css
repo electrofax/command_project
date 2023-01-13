@@ -1,6 +1,6 @@
 .progressBar {
     background-color: grey;
-    width: 200px;
+    width: 300px;
     height: 15px;
 }
 
@@ -19,3 +19,7 @@
 .interests {
     padding-left: 2px;
 }
+
+/* #name {
+    margin: 20px;
+} */

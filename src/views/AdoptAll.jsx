@@ -24,6 +24,7 @@ function AdoptAll(props) {
 
           <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }} key={list.id} id="name">
           {list.employee_name}
+          
           <div id="checkProgress">
             <a href={`/form/${list.link}`}>
           Проверить</a>
@@ -37,7 +38,7 @@ function AdoptAll(props) {
       <div id="some">
         {some.map((el) => (
           <div key={el.id} className='interestAntPorogressBar'>
-            <div className='progressBar progressBarGray'></div> <div className='interests'>{ ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)} %  </div>
+            <div className='progressBarGray'><div className='progressBar'></div></div> <div className='interests'>{ ((isBool(el).filter((one) => one[1] === true).length/12) * 100).toFixed(0)} %  </div>
           </div>
           
         ))}
