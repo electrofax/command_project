@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const { renderReset } = require('../controllers/resetPswdController');
+const { renderReset, updatePassword } = require('../controllers/resetPswdController');
 
 router
   .get('/:id', renderReset)
-  // .post('/', regUser);
+  .put('/id', updatePassword);
 
 module.exports = router;
