@@ -299,3 +299,7 @@ body{
   height: 25px;
   cursor: pointer;
 }
+
+.copyText {
+  font-size: 10px;
+}

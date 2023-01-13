@@ -9,7 +9,7 @@ if(el('#copyyLink')) {
         i.addEventListener('click', async (event) => {
             copyURI(event)
             i.style.opacity = '0.5'
-        })
+            })
     })
 
 }
