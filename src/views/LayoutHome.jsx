@@ -30,19 +30,19 @@ function LayoutHome(props) {
               <li className="logo">
               <img src="/img/logo.png" className="img-fluid" alt="..."></img>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="/">Home</a>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href='#'>
-                    ООО Высокая гора
+                    ООО "Высокая гора"
                     </a>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href='/adopt'>
                     Создать пользователя
                     </a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
